@@ -1,0 +1,6 @@
+benchmark,protocol,bucket_order,paper_negative,paper_not_significant,paper_possibly_significant,paper_certainly_significant,current_negative,current_not_significant,current_possibly_significant,current_certainly_significant,total
+LIBERO,Spatial + Object + Goal,negative;not_significant;possibly_significant;certainly_significant,302,164,167,156,363,112,170,144,789
+CALVIN,ABC->D,negative;not_significant;possibly_significant;certainly_significant,21,3,36,47,24,0,36,47,107
+SimplerEnv,WidowX-Bridge,negative;not_significant;possibly_significant;certainly_significant,13,23,62,24,17,16,62,27,122
+RoboCasa,RSS24 protocol,negative;not_significant;possibly_significant;certainly_significant,4,0,10,16,4,0,10,16,30
+RoboTwin 2.0,50 clean + 500 randomized demos,negative;not_significant;possibly_significant;certainly_significant,2,0,3,14,2,0,3,14,19

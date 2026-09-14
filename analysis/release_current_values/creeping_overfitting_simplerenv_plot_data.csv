@@ -1,0 +1,17 @@
+policy,policy_label,plot_label,condition,condition_label,successes,total,release_source_csv,release_source_key
+cogact,CogACT-Base,CogACT,original_stack,Original stack,60,288,creeping_overfitting/results/simplerenv/fixed_grid_calibration/per_task_summary.csv,stack
+cogact,CogACT-Base,CogACT,language_swap,Reverse language,28,288,creeping_overfitting/results/simplerenv/distribution_overfitting/per_policy_condition_summary.csv,reverse_language
+cogact,CogACT-Base,CogACT,stacked_support,Stacked support blocks,64,288,creeping_overfitting/results/simplerenv/distribution_overfitting/per_policy_condition_summary.csv,stacked_support
+cogact,CogACT-Base,CogACT,pose_arm_randomized,Random pose + arm,31,288,creeping_overfitting/results/simplerenv/distribution_overfitting/per_policy_condition_summary.csv,random_pose_arm
+internvla_m1,InternVLA-M1,InternVLA,original_stack,Original stack,73,288,creeping_overfitting/results/simplerenv/fixed_grid_calibration/per_task_summary.csv,stack
+internvla_m1,InternVLA-M1,InternVLA,language_swap,Reverse language,46,288,creeping_overfitting/results/simplerenv/distribution_overfitting/per_policy_condition_summary.csv,reverse_language
+internvla_m1,InternVLA-M1,InternVLA,stacked_support,Stacked support blocks,60,288,creeping_overfitting/results/simplerenv/distribution_overfitting/per_policy_condition_summary.csv,stacked_support
+internvla_m1,InternVLA-M1,InternVLA,pose_arm_randomized,Random pose + arm,46,288,creeping_overfitting/results/simplerenv/distribution_overfitting/per_policy_condition_summary.csv,random_pose_arm
+xvla,X-VLA-WidowX,X-VLA,original_stack,Original stack,172,288,creeping_overfitting/results/simplerenv/fixed_grid_calibration/per_task_summary.csv,stack
+xvla,X-VLA-WidowX,X-VLA,language_swap,Reverse language,153,288,creeping_overfitting/results/simplerenv/distribution_overfitting/per_policy_condition_summary.csv,reverse_language
+xvla,X-VLA-WidowX,X-VLA,stacked_support,Stacked support blocks,90,288,creeping_overfitting/results/simplerenv/distribution_overfitting/per_policy_condition_summary.csv,stacked_support
+xvla,X-VLA-WidowX,X-VLA,pose_arm_randomized,Random pose + arm,160,288,creeping_overfitting/results/simplerenv/distribution_overfitting/per_policy_condition_summary.csv,random_pose_arm
+dexbotic,Dexbotic / DB-MemVLA,DB-MemVLA,original_stack,Original stack,129,288,creeping_overfitting/results/simplerenv/fixed_grid_calibration/per_task_summary.csv,stack
+dexbotic,Dexbotic / DB-MemVLA,DB-MemVLA,language_swap,Reverse language,137,288,creeping_overfitting/results/simplerenv/distribution_overfitting/per_policy_condition_summary.csv,reverse_language
+dexbotic,Dexbotic / DB-MemVLA,DB-MemVLA,stacked_support,Stacked support blocks,79,288,creeping_overfitting/results/simplerenv/distribution_overfitting/per_policy_condition_summary.csv,stacked_support
+dexbotic,Dexbotic / DB-MemVLA,DB-MemVLA,pose_arm_randomized,Random pose + arm,112,288,creeping_overfitting/results/simplerenv/distribution_overfitting/per_policy_condition_summary.csv,random_pose_arm

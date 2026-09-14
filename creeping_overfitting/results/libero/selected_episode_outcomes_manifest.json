@@ -1,0 +1,1975 @@
+{
+  "fresh": {
+    "csv": "fresh_init_state_selected_episode_outcomes.csv",
+    "retry_replacements": [
+      {
+        "policy": "spatial_forcing",
+        "replacement_run_group": "layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z_spatial_forcing_retry2_20260520T025310Z",
+        "suite": "libero_spatial",
+        "task_id": 1
+      },
+      {
+        "policy": "spatial_forcing",
+        "replacement_run_group": "layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z_spatial_forcing_retry2_20260520T025310Z",
+        "suite": "libero_goal",
+        "task_id": 5
+      }
+    ],
+    "rows_by_policy": {
+      "pi05_lerobot": 10000,
+      "simvla": 10000,
+      "spatial_forcing": 10000
+    },
+    "source_files": [
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_spatial/task_0/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z_spatial_forcing_retry2_20260520T025310Z/spatial_forcing/libero_spatial/task_1/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "retry_replacement",
+        "suite": "libero_spatial",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_spatial/task_2/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_spatial/task_3/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_spatial/task_4/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_spatial/task_5/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_spatial/task_6/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_spatial/task_7/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_spatial/task_8/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_spatial/task_9/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_object/task_0/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_object/task_1/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_object/task_2/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_object/task_3/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_object/task_4/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_object/task_5/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_object/task_6/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_object/task_7/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_object/task_8/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_object/task_9/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_goal/task_0/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_goal/task_1/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_goal/task_2/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_goal/task_3/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_goal/task_4/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z_spatial_forcing_retry2_20260520T025310Z/spatial_forcing/libero_goal/task_5/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "retry_replacement",
+        "suite": "libero_goal",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_goal/task_6/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_goal/task_7/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_goal/task_8/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_goal/task_9/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_10/task_0/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_10/task_1/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_10/task_2/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_10/task_3/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_10/task_4/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_10/task_5/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_10/task_6/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_10/task_7/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_10/task_8/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/spatial_forcing/libero_10/task_9/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_spatial/task_0/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_spatial/task_1/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_spatial/task_2/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_spatial/task_3/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_spatial/task_4/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_spatial/task_5/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_spatial/task_6/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_spatial/task_7/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_spatial/task_8/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_spatial/task_9/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_object/task_0/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_object/task_1/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_object/task_2/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_object/task_3/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_object/task_4/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_object/task_5/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_object/task_6/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_object/task_7/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_object/task_8/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_object/task_9/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_goal/task_0/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_goal/task_1/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_goal/task_2/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_goal/task_3/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_goal/task_4/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_goal/task_5/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_goal/task_6/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_goal/task_7/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_goal/task_8/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_goal/task_9/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_10/task_0/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_10/task_1/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_10/task_2/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_10/task_3/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_10/task_4/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_10/task_5/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_10/task_6/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_10/task_7/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_10/task_8/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/simvla/libero_10/task_9/episodes.csv",
+        "policy": "simvla",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_spatial/task_0/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_spatial/task_1/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_spatial/task_2/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_spatial/task_3/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_spatial/task_4/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_spatial/task_5/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_spatial/task_6/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_spatial/task_7/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_spatial/task_8/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_spatial/task_9/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_spatial",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_object/task_0/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_object/task_1/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_object/task_2/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_object/task_3/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_object/task_4/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_object/task_5/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_object/task_6/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_object/task_7/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_object/task_8/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_object/task_9/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_object",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_goal/task_0/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_goal/task_1/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_goal/task_2/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_goal/task_3/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_goal/task_4/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_goal/task_5/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_goal/task_6/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_goal/task_7/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_goal/task_8/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_goal/task_9/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_goal",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_10/task_0/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_10/task_1/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_10/task_2/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_10/task_3/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_10/task_4/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_10/task_5/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_10/task_6/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_10/task_7/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_10/task_8/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/layer2_full/layer2_full_48g_no_g0g7_20260519T202906Z/pi05_lerobot/libero_10/task_9/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 250,
+        "selection_note": "original_full_run",
+        "suite": "libero_10",
+        "task_id": 9
+      }
+    ],
+    "successes_by_policy": {
+      "pi05_lerobot": 9741,
+      "simvla": 9760,
+      "spatial_forcing": 9718
+    }
+  },
+  "official_calibration": {
+    "csv": "official_calibration_selected_episode_outcomes.csv",
+    "rows_by_policy": {
+      "pi05_lerobot": 2000,
+      "simvla": 2000,
+      "spatial_forcing": 2000
+    },
+    "selection_rules": [
+      "Spatial Forcing uses strict other-three-suite rerun plus strict libero_10 rerun.",
+      "SimVLA uses retry run for libero_spatial and libero_10, original run for libero_object and libero_goal.",
+      "Pi05 / LeRobot uses original official calibration for all four suites."
+    ],
+    "source_files": [
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_spatial/task_0/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_spatial",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_spatial/task_1/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_spatial",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_spatial/task_2/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_spatial",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_spatial/task_3/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_spatial",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_spatial/task_4/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_spatial",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_spatial/task_5/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_spatial",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_spatial/task_6/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_spatial",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_spatial/task_7/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_spatial",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_spatial/task_8/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_spatial",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_spatial/task_9/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_spatial",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_object/task_0/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_object",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_object/task_1/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_object",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_object/task_2/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_object",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_object/task_3/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_object",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_object/task_4/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_object",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_object/task_5/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_object",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_object/task_6/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_object",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_object/task_7/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_object",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_object/task_8/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_object",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_object/task_9/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_object",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_goal/task_0/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_goal",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_goal/task_1/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_goal",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_goal/task_2/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_goal",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_goal/task_3/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_goal",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_goal/task_4/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_goal",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_goal/task_5/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_goal",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_goal/task_6/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_goal",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_goal/task_7/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_goal",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_goal/task_8/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_goal",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_other3_20260523T043436Z/spatial_forcing/libero_goal/task_9/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_other3_20260523T043436Z",
+        "suite": "libero_goal",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_libero10_20260522T233720Z/spatial_forcing/libero_10/task_0/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_libero10_20260522T233720Z",
+        "suite": "libero_10",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_libero10_20260522T233720Z/spatial_forcing/libero_10/task_1/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_libero10_20260522T233720Z",
+        "suite": "libero_10",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_libero10_20260522T233720Z/spatial_forcing/libero_10/task_2/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_libero10_20260522T233720Z",
+        "suite": "libero_10",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_libero10_20260522T233720Z/spatial_forcing/libero_10/task_3/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_libero10_20260522T233720Z",
+        "suite": "libero_10",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_libero10_20260522T233720Z/spatial_forcing/libero_10/task_4/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_libero10_20260522T233720Z",
+        "suite": "libero_10",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_libero10_20260522T233720Z/spatial_forcing/libero_10/task_5/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_libero10_20260522T233720Z",
+        "suite": "libero_10",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_libero10_20260522T233720Z/spatial_forcing/libero_10/task_6/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_libero10_20260522T233720Z",
+        "suite": "libero_10",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_libero10_20260522T233720Z/spatial_forcing/libero_10/task_7/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_libero10_20260522T233720Z",
+        "suite": "libero_10",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_libero10_20260522T233720Z/spatial_forcing/libero_10/task_8/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_libero10_20260522T233720Z",
+        "suite": "libero_10",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/strict_calibration/strict_spatial_forcing_libero10_20260522T233720Z/spatial_forcing/libero_10/task_9/episodes.csv",
+        "policy": "spatial_forcing",
+        "rows": 50,
+        "selection_note": "strict_spatial_forcing_libero10_20260522T233720Z",
+        "suite": "libero_10",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_spatial/task_0/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_spatial",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_spatial/task_1/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_spatial",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_spatial/task_2/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_spatial",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_spatial/task_3/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_spatial",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_spatial/task_4/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_spatial",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_spatial/task_5/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_spatial",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_spatial/task_6/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_spatial",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_spatial/task_7/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_spatial",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_spatial/task_8/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_spatial",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_spatial/task_9/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_spatial",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_object/task_0/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_object/task_1/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_object/task_2/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_object/task_3/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_object/task_4/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_object/task_5/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_object/task_6/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_object/task_7/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_object/task_8/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_object/task_9/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_goal/task_0/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_goal/task_1/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_goal/task_2/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_goal/task_3/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_goal/task_4/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_goal/task_5/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_goal/task_6/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_goal/task_7/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_goal/task_8/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/simvla/libero_goal/task_9/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_10/task_0/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_10",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_10/task_1/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_10",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_10/task_2/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_10",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_10/task_3/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_10",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_10/task_4/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_10",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_10/task_5/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_10",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_10/task_6/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_10",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_10/task_7/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_10",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_10/task_8/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_10",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z/simvla/libero_10/task_9/episodes.csv",
+        "policy": "simvla",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z_simvla_retry_20260522T033102Z",
+        "suite": "libero_10",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_spatial/task_0/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_spatial",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_spatial/task_1/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_spatial",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_spatial/task_2/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_spatial",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_spatial/task_3/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_spatial",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_spatial/task_4/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_spatial",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_spatial/task_5/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_spatial",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_spatial/task_6/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_spatial",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_spatial/task_7/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_spatial",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_spatial/task_8/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_spatial",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_spatial/task_9/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_spatial",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_object/task_0/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_object/task_1/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_object/task_2/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_object/task_3/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_object/task_4/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_object/task_5/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_object/task_6/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_object/task_7/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_object/task_8/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_object/task_9/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_object",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_goal/task_0/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_goal/task_1/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_goal/task_2/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_goal/task_3/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_goal/task_4/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_goal/task_5/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_goal/task_6/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_goal/task_7/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_goal/task_8/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_goal/task_9/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_goal",
+        "task_id": 9
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_10/task_0/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_10",
+        "task_id": 0
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_10/task_1/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_10",
+        "task_id": 1
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_10/task_2/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_10",
+        "task_id": 2
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_10/task_3/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_10",
+        "task_id": 3
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_10/task_4/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_10",
+        "task_id": 4
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_10/task_5/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_10",
+        "task_id": 5
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_10/task_6/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_10",
+        "task_id": 6
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_10/task_7/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_10",
+        "task_id": 7
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_10/task_8/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_10",
+        "task_id": 8
+      },
+      {
+        "path": "/share/data/ripl/tianchong/projects/Eval_Policies_CoRL/results/libero/official_calibration/official_calibration_20260522T002327Z/pi05_lerobot/libero_10/task_9/episodes.csv",
+        "policy": "pi05_lerobot",
+        "rows": 50,
+        "selection_note": "official_calibration_20260522T002327Z",
+        "suite": "libero_10",
+        "task_id": 9
+      }
+    ],
+    "successes_by_policy": {
+      "pi05_lerobot": 1951,
+      "simvla": 1946,
+      "spatial_forcing": 1956
+    }
+  },
+  "sanitization": "kept task identity, instance_id, outcome, step count, source run group, and selection note; omitted private absolute checkpoint and init-state paths",
+  "schema": "libero_selected_episode_outcomes_v1",
+  "source_commit": "eba7c0037294557427a7a854c91be56d3f2838ec for current tracked result state; run groups predate this commit as recorded in project notes",
+  "source_repo": "Eval_Policies_CoRL"
+}

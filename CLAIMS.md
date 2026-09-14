@@ -4,6 +4,19 @@
 
 This file maps paper-facing manipulation benchmark audit claims to the lightweight public files in this repository. Claims are marked as public-recomputed when `scripts/recompute_claims.py` recomputes the number from included files; intentional exclusions are called out where they affect artifact scope.
 
+## Reproduction Levels
+
+1. CPU claim and analysis regeneration: released CSV/JSON/YAML files are enough to recompute the public numeric claims with `scripts/recompute_claims.py`; committed `analysis/paper_inputs` are enough to regenerate the selected frozen paper CSV/SVG/TeX artifacts with `analysis/run_analysis.py paper-inputs`; committed release files are enough to regenerate the release-current analysis CSVs with `analysis/run_analysis.py current`.
+2. Own-policy training: `data_source_dependency/code/` and `shortcut_solvability/code/` contain first-party trainers/evaluators for this project's simple policies. They require the listed dependencies and named external data/checkpoints; validation coverage is limited by each diagnostic README.
+3. Third-party policy evaluation artifacts: for external policies, the public package records compact outputs, configs, small custom assets, exact reset/init-state artifacts, and public-safe adapters or patches. It does not claim universal one-command replay of third-party checkpoints, datasets, simulators, or historical cluster runs.
+
+The claims below are CPU-recomputed unless a diagnostic README or code directory explicitly states a stronger runnable scope.
+
+## Analysis Artifacts
+
+1. Frozen paper artifact regeneration: `analysis/run_analysis.py paper-inputs` uses the eight committed CSVs under `analysis/paper_inputs/` to regenerate three value CSVs, two SVG figures, and the confidence-interval TeX table without a private manuscript checkout.
+2. Release-current analysis: `analysis/run_analysis.py current --expected-dir analysis/release_current_values` regenerates the committed current CSVs. `analysis/run_analysis.py compare-paper` intentionally exits with status `1` and writes row-level evidence for `92` historical/current statistical-significance classification differences.
+
 ## Shortcut Solvability
 
 1. LIBERO fixed-instruction shortcut policy: public-recomputed from `shortcut_solvability/results/libero/results.csv` and `shortcut_solvability/results/libero/best_checkpoint/*/{summary.json,trials.csv}`. Headline cells are Spatial `495/500 = 99.0%`, Object `500/500 = 100.0%`, Goal `494/500 = 98.8%`, and Long `462/500 = 92.4%`.
@@ -11,7 +24,7 @@ This file maps paper-facing manipulation benchmark audit claims to the lightweig
 
 ## Statistical Significance
 
-1. LIBERO Goal shared-instance pairwise disagreement: public-recomputed from `statistical_significance/libero_goal_5x5k/policy_success_summary.csv`, `pairwise_disagreement.csv`, `policies/*/{policy_summary.json,episodes_combined.csv}`, and `shared/{libero_config.yaml,init_state_goal_5000_MANIFEST.json}`. The released package verifies five policies with `5000` shared instance IDs each, then recomputes every joined policy pair. The paper-facing value is mean pairwise `D = 0.03528` and median `0.0354`.
+1. LIBERO Goal shared-instance pairwise disagreement: public-recomputed from `statistical_significance/libero_goal_5x5k/policy_success_summary.csv`, `pairwise_disagreement.csv`, `policies/*/{policy_summary.json,episodes_combined.csv}`, and `shared/{libero_config.yaml,init_state_goal_5000_MANIFEST.json,init_state_goal_5000/}`. The released package verifies five policies with `5000` shared instance IDs each, then recomputes every joined policy pair. The paper-facing value is mean pairwise `D = 0.03528` and median `0.0354`.
 2. Aggregate-data previous-SOTA significance categories: generated from the five released Sam official-protocol previous-SOTA exports under `leaderboards/stat_significance_sam_export_20260522T233929/` using `statistical_significance/code/generate_significance_categories.py` and the cutoff logic in `statistical_significance/code/significance_cutoffs.py`. The released category tables contain `1349` comparable rows: `497` no-improvement, `145` provably-not-significant, `331` provably-significant, and `376` indeterminate. Another `212` benchmark/track rows are explicitly excluded in `excluded_missing_scores.csv` because the current score or previous-SOTA score is missing in the source export. Count conversion uses Python nearest-even `round()` to match Sam's reference code, and the released CSVs include scaled-count and rounding-residual columns.
 
 ## Leaderboards

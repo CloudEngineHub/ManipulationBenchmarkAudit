@@ -1,0 +1,92 @@
+{
+  "baked_green_cube_3cm": {
+    "bbox": {
+      "min": [
+        -0.015,
+        -0.015,
+        -0.015
+      ],
+      "max": [
+        0.015,
+        0.015,
+        0.015
+      ]
+    },
+    "scales": [
+      1.0
+    ],
+    "density": 1000
+  },
+  "baked_yellow_cube_3cm": {
+    "bbox": {
+      "min": [
+        -0.015,
+        -0.015,
+        -0.015
+      ],
+      "max": [
+        0.015,
+        0.015,
+        0.015
+      ]
+    },
+    "scales": [
+      1.0
+    ],
+    "density": 1000
+  },
+  "render_candidate_blue_hybrid_v4": {
+    "bbox": {
+      "min": [
+        -0.015,
+        -0.015,
+        -0.015
+      ],
+      "max": [
+        0.015,
+        0.015,
+        0.015
+      ]
+    },
+    "scales": [
+      1.0
+    ],
+    "density": 1000
+  },
+  "render_candidate_red_corrected_v6e": {
+    "bbox": {
+      "min": [
+        -0.015,
+        -0.015,
+        -0.015
+      ],
+      "max": [
+        0.015,
+        0.015,
+        0.015
+      ]
+    },
+    "scales": [
+      1.0
+    ],
+    "density": 1000
+  },
+  "render_candidate_white_offwhite_hybrid_v4": {
+    "bbox": {
+      "min": [
+        -0.015,
+        -0.015,
+        -0.015
+      ],
+      "max": [
+        0.015,
+        0.015,
+        0.015
+      ]
+    },
+    "scales": [
+      1.0
+    ],
+    "density": 1000
+  }
+}

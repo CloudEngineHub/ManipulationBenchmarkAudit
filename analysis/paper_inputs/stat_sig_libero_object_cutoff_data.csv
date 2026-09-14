@@ -1,0 +1,260 @@
+paper_name,libero_object,libero_object_prev_sota,delta_libero_object,P_A,Delta_necessary,Delta_sufficient,delta_bin
+Depth Helps: Improving Pre-trained RGB-based Policy with Depth Information Injection,78.6,86.2,-0.07600000000000007,0.862,0.006,0.038,negative
+Diffusion Transformer Policy,96.3,92.5,0.03799999999999992,0.924,0.006,0.028,certainly_significant
+GRAPE: Generalizing Robot Policy via Preference Alignment,92.1,88.6,0.03500000000000003,0.886,0.006,0.034,certainly_significant
+MaIL: Improving Imitation Learning with Mamba,81.5,81.2,0.0029999999999998916,0.812,0.006,0.044,not_significant
+Multimodal Diffusion Transformer: Learning Versatile Behavior from Multimodal Goals,87.5,72.0,0.15500000000000003,0.72,0.006,0.054,certainly_significant
+OpenVLA: An Open-Source Vision-Language-Action Model,88.4,92.5,-0.041000000000000036,0.924,0.006,0.028,negative
+Quantization-Aware Imitation-Learning for Resource-Efficient Robotic Control,83.6,83.8,-0.0020000000000000018,0.838,0.006,0.04,negative
+Robo-MUTUAL: Robotic Multimodal Task Specification via Unimodal Learning,93.9,63.9,0.30000000000000004,0.64,0.006,0.062,certainly_significant
+Task-agnostic Lifelong Robot Learning with Retrieval-based Weighted Local Adaptation,62.33,56.5,0.05830000000000002,0.564,0.006,0.068,possibly_significant
+TraceVLA: Visual Trace Prompting Enhances Spatial-Temporal Awareness for Generalist Robotic Policies,85.2,83.8,0.014000000000000012,0.838,0.006,0.04,possibly_significant
+3D Dynamics-Aware Manipulation: Endowing Manipulation Policies with 3D Foresight,98.0,94.8,0.03200000000000003,0.948,0.006,0.022,certainly_significant
+4D-VLA: Spatiotemporal Vision-Language-Action Pretraining with Cross-Scene Calibration,95.2,92.5,0.027000000000000024,0.924,0.006,0.028,possibly_significant
+ActDistill: General Action-Guided Self-Derived Distillation for Efficient Vision-Language-Action Models,85.8,86.6,-0.008000000000000007,0.866,0.006,0.036,negative
+Action-aware Dynamic Pruning for Efficient Vision-Language-Action Manipulation,98.0,98.2,-0.0020000000000000018,0.982,0.006,0.012,negative
+ActionSink: Toward Precise Robot Manipulation with Dynamic Integration of Action Flow,72.67,68.0,0.046699999999999964,0.68,0.006,0.058,possibly_significant
+AsyncVLA: Asynchronous Flow Matching for Vision-Language-Action Models,99.2,98.8,0.0040000000000000036,0.988,0.006,0.01,not_significant
+Audio-VLA: Adding Contact Audio Perception to Vision-Language-Action Model for Robotic Manipulation,98.5,98.4,0.0009999999999998899,0.984,0.006,0.012,not_significant
+BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization,96.7,98.3,-0.015999999999999903,0.984,0.006,0.012,negative
+Balancing Signal and Variance: Adaptive Offline RL Post-Training for VLA Flow Models,95.0,94.3,0.007000000000000006,0.944,0.006,0.024,possibly_significant
+Beyond Human Demonstrations: Diffusion-Based Reinforcement Learning to Generate Data for VLA Training,99.0,92.0,0.06999999999999995,0.92,0.006,0.028,certainly_significant
+BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation,99.0,98.8,0.0020000000000000018,0.988,0.006,0.01,not_significant
+Bridging Scale Discrepancies in Robotic Control via Language-Based Action Representations,90.0,92.5,-0.025000000000000022,0.924,0.006,0.028,negative
+CLIP-RT: Learning Language-Conditioned Robotic Policies from Natural Language Supervision,99.2,98.3,0.009000000000000008,0.984,0.006,0.012,possibly_significant
+CoA-VLA: Improving Vision-Language-Action Models via Visual-Textual Chain-of-Affordance,93.1,92.5,0.005999999999999894,0.924,0.006,0.028,not_significant
+CogVLA: Cognition-Aligned Vision-Language-Action Model via Instruction-Driven Routing &amp; Sparsification,98.8,98.8,0.0,0.988,0.006,0.01,not_significant
+Compressor-VLA: Instruction-Guided Visual Token Compression for Efficient Robotic Manipulation,99.2,98.8,0.0040000000000000036,0.988,0.006,0.01,not_significant
+Conditioning Matters: Training Diffusion Policies is Faster Than You Think,99.1,98.8,0.0030000000000000027,0.988,0.006,0.01,not_significant
+CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action Models,91.6,92.5,-0.009000000000000119,0.924,0.006,0.028,negative
+CronusVLA: Towards Efficient and Robust Manipulation via Multi-Frame Vision-Language-Action Modeling,99.6,98.4,0.0119999999999999,0.984,0.006,0.012,possibly_significant
+Cross-Platform Scaling of Vision-Language-Action Models from Edge to Cloud GPUs,99.5,98.3,0.01200000000000001,0.984,0.006,0.012,certainly_significant
+D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI,98.4,98.4,0.0,0.984,0.006,0.012,not_significant
+Decoupled Action Expert: Confining Task Knowledge to the Conditioning Pathway,98.6,93.1,0.05500000000000005,0.93,0.006,0.026,certainly_significant
+DeepThinkVLA: Enhancing Reasoning Capability of Vision-Language-Action Models,99.0,98.8,0.0020000000000000018,0.988,0.006,0.01,not_significant
+Dejavu: Towards Experience Feedback Learning for Embodied Intelligence,98.2,97.9,0.0029999999999998916,0.98,0.006,0.014,not_significant
+DepthVLA: Enhancing Vision-Language-Action Models with Depth-Aware Spatial Reasoning,98.0,98.8,-0.008000000000000007,0.988,0.006,0.01,negative
+DiG-Flow: Discrepancy-Guided Flow Matching for Robust VLA Models,99.0,98.4,0.005999999999999894,0.984,0.006,0.012,not_significant
+Discrete Diffusion VLA: Bringing Discrete Diffusion to Action Decoding in Vision-Language-Action Policies,98.6,98.8,-0.0020000000000000018,0.988,0.006,0.01,negative
+Dita: Scaling Diffusion Transformer for Generalist Vision-Language-Action Policy,94.8,92.5,0.02299999999999991,0.924,0.006,0.028,possibly_significant
+Don't Run with Scissors: Pruning Breaks VLA Models but They Can Be Recovered,71.2,85.8,-0.1459999999999999,0.858,0.006,0.038,negative
+Dream-VL & Dream-VLA: Open Vision-Language and Vision-Language-Action Models with Diffusion Language Model Backbone,98.8,98.8,0.0,0.988,0.006,0.01,not_significant
+dVLA: Diffusion Vision-Language-Action Model with Multimodal Chain-of-Thought,97.9,98.8,-0.008999999999999897,0.988,0.006,0.01,negative
+E0: Enhancing Generalization and Fine-Grained Control in VLA Models via Tweedie Discrete Diffusion,99.4,98.8,0.006000000000000116,0.988,0.006,0.01,possibly_significant
+"End-to-end Listen, Look, Speak and Act",95.8,96.8,-0.010000000000000009,0.968,0.006,0.018,negative
+EnerVerse: Envisioning Embodied Future Space for Robotics Manipulation,97.7,92.5,0.051999999999999935,0.924,0.006,0.028,certainly_significant
+Evo-1: Lightweight Vision-Language-Action Model with Preserved Semantic Alignment,97.7,98.8,-0.01100000000000001,0.988,0.006,0.01,negative
+EVOLVE-VLA: Test-Time Training from Environment Feedback for Vision-Language-Action Models,97.4,98.8,-0.013999999999999901,0.988,0.006,0.01,negative
+ExpReS-VLA: Specializing Vision-Language-Action Models Through Experience Replay and Retrieval,93.9,97.5,-0.03599999999999992,0.976,0.006,0.014,negative
+Fast ECoT: Efficient Embodied Chain-of-Thought via Thoughts Reuse,83.0,87.0,-0.040000000000000036,0.87,0.006,0.036,negative
+FASTer: Toward Efficient Autoregressive Vision Language Action Modeling via Neural Action Tokenization,99.4,98.8,0.006000000000000116,0.988,0.006,0.01,possibly_significant
+Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success,98.4,98.8,-0.0039999999999998925,0.988,0.006,0.01,negative
+FLOWER: Democratizing Generalist Robot Policies with Efficient Vision-Language-Action Flow Policies,99.1,98.8,0.0030000000000000027,0.988,0.006,0.01,not_significant
+Focusing on What Matters: Object-Agent-centric Tokenization for Vision Language Action models,89.1,92.5,-0.03400000000000014,0.924,0.006,0.028,negative
+FreqPolicy: Efficient Flow-based Visuomotor Policy via Frequency Consistency,98.6,98.6,0.0,0.986,0.006,0.01,not_significant
+From Grounding to Manipulation: Case Studies of Foundation Model Integration in Embodied Robotic Systems,95.4,98.8,-0.03399999999999992,0.988,0.006,0.01,negative
+GeoAware-VLA: Implicit Geometry Aware Vision-Language-Action Model,100.0,100.0,0.0,1.0,,,certainly_significant
+GeoPredict: Leveraging Predictive Kinematics and 3D Gaussian Geometry for Precise VLA Manipulation,98.2,98.8,-0.006000000000000005,0.988,0.006,0.01,negative
+Goal-oriented Backdoor Attack against Vision-Language-Action Models via Physical Objects,99.1,98.8,0.0030000000000000027,0.988,0.006,0.01,not_significant
+"HiF-VLA: Hindsight, Insight and Foresight through Motion Representation for Vision-Language-Action Models",99.4,98.8,0.006000000000000116,0.988,0.006,0.01,possibly_significant
+HiMoE-VLA: Hierarchical Mixture-of-Experts for Generalist Vision-Language-Action Policies,99.4,98.8,0.006000000000000116,0.988,0.006,0.01,possibly_significant
+How Do VLAs Effectively Inherit from VLMs?,92.0,99.0,-0.06999999999999995,0.99,0.006,0.01,negative
+Hybrid Training for Vision-Language-Action Models,97.2,97.8,-0.006000000000000005,0.978,0.006,0.014,negative
+HyperVLA: Efficient Inference in Vision-Language-Action Models via Hypernetworks,94.0,88.0,0.05999999999999994,0.88,0.006,0.034,certainly_significant
+Interactive Post-Training for Vision-Language-Action Models,98.6,98.8,-0.0020000000000000018,0.988,0.006,0.01,negative
+InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy,99.0,98.8,0.0020000000000000018,0.988,0.006,0.01,not_significant
+"Knowledge Insulating Vision-Language-Action Models: Train Fast, Run Fast, Generalize Better",97.8,98.8,-0.010000000000000009,0.988,0.006,0.01,negative
+LatBot: Distilling Universal Latent Actions for Vision-Language-Action Models,98.8,98.4,0.0039999999999998925,0.984,0.006,0.012,not_significant
+Latent Action Pretraining Through World Modeling,100.0,100.0,0.0,1.0,,,certainly_significant
+LoLA: Long Horizon Latent Action Learning for General Robot Manipulation,99.6,97.8,0.018000000000000016,0.978,0.006,0.014,certainly_significant
+Mantis: A Versatile Vision-Language-Action Model with Disentangled Visual Foresight,99.2,98.8,0.0040000000000000036,0.988,0.006,0.01,not_significant
+MAP-VLA: Memory-Augmented Prompting for Vision-Language-Action Model in Robotic Manipulation,98.4,97.4,0.010000000000000009,0.974,0.006,0.016,possibly_significant
+MAPS: Preserving Vision-Language Representations via Module-Wise Proximity Scheduling for Better Vision-Language-Action Generalization,14.0,9.0,0.05000000000000002,0.09,0.006,0.036,certainly_significant
+MemoryVLA: Perceptual-Cognitive Memory in Vision-Language-Action Models for Robotic Manipulation,98.4,98.8,-0.0039999999999998925,0.988,0.006,0.01,negative
+MergeVLA: Cross-Skill Model Merging Toward a Generalist Vision-Language-Action Agent,94.6,99.6,-0.050000000000000044,0.996,,,negative
+MetaVLA: Unified Meta Co-training For Efficient Embodied Adaption,88.9,98.2,-0.09299999999999997,0.982,0.006,0.012,negative
+Mixture of Horizons in Action Chunking,100.0,99.6,0.0040000000000000036,0.996,,,certainly_significant
+Multimodal Reinforcement Learning with Adaptive Verifier for AI Agents,93.2,89.2,0.040000000000000036,0.892,0.006,0.032,certainly_significant
+NORA: A Small Open-Sourced Generalist Vision Language Action Model for Embodied Tasks,95.4,89.9,0.05500000000000005,0.9,0.006,0.032,certainly_significant
+PixelVLA: Advancing Pixel-level Understanding in Vision-Language-Action Model,90.0,96.3,-0.06299999999999994,0.964,0.006,0.018,negative
+Reflection-Based Task Adaptation for Self-Improving VLA,93.4,96.8,-0.03399999999999992,0.968,0.006,0.018,negative
+Reinforcement Fine-Tuning of Flow-Matching Policies for Vision-Language-Action Models,97.3,96.8,0.0050000000000000044,0.968,0.006,0.018,not_significant
+RESample: A Robust Data Augmentation Framework via Exploratory Sampling for Robotic Manipulation,96.4,97.6,-0.0119999999999999,0.976,0.006,0.014,negative
+Rethinking Latent Redundancy in Behavior Cloning: An Information Bottleneck Approach for Robot Manipulation,52.0,43.0,0.09000000000000002,0.43,0.006,0.072,certainly_significant
+RetoVLA: Reusing Register Tokens for Spatial Reasoning in Vision-Language-Action Models,71.8,70.8,0.010000000000000009,0.708,0.006,0.054,possibly_significant
+RLinf-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models,99.67,50.2,0.49470000000000003,0.502,0.006,0.072,certainly_significant
+RoboNeuron: A Middle-Layer Infrastructure for Agent-Driven Orchestration in Embodied AI,98.0,97.6,0.0040000000000000036,0.976,0.006,0.014,not_significant
+Robotic VLA Benefits from Joint Learning with Motion Image Diffusion,99.2,98.8,0.0040000000000000036,0.988,0.006,0.01,not_significant
+RynnVLA-002: A Unified Vision-Language-Action and World Model,99.8,98.4,0.013999999999999901,0.984,0.006,0.012,certainly_significant
+Saliency-Aware Quantized Imitation Learning for Efficient Robotic Control,83.5,83.9,-0.004000000000000115,0.84,0.006,0.04,negative
+Self-Improving Vision-Language-Action Models with Data Generation via Residual RL,99.1,99.1,0.0,0.992,0.006,0.008,not_significant
+SemanticVLA: Semantic-Aligned Sparsification and Enhancement for Efficient Robotic Manipulation,99.6,98.8,0.008000000000000007,0.988,0.006,0.01,possibly_significant
+SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning,99.1,98.8,0.0030000000000000027,0.988,0.006,0.01,not_significant
+SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics,96.0,92.5,0.03499999999999992,0.924,0.006,0.028,certainly_significant
+Spatial-Aware VLA Pretraining through Visual-Physical Alignment from Human Videos,97.2,97.6,-0.0040000000000000036,0.976,0.006,0.014,negative
+Spatial Forcing: Implicit Spatial Representation Alignment for Vision-language-action Model,99.6,99.8,-0.0020000000000000018,0.998,,,negative
+SpatialVLA: Exploring Spatial Representations for Visual-Language-Action Model,89.9,92.5,-0.026000000000000023,0.924,0.006,0.028,negative
+Spec-VLA: Speculative Decoding for Vision-Language-Action Models with Relaxed Acceptance,85.0,89.0,-0.040000000000000036,0.89,0.006,0.034,negative
+SpecPrune-VLA: Accelerating Vision-Language-Action Models via Action-Aware Self-Speculative Pruning,95.8,98.8,-0.030000000000000027,0.988,0.006,0.01,negative
+STAR: Learning Diverse Robot Skill Abstractions through Rotation-Augmented Vector Quantization,98.3,90.3,0.07999999999999996,0.904,0.006,0.03,certainly_significant
+TGRPO: Fine-tuning Vision-Language-Action Model via Trajectory-wise Group Relative Policy Optimization,92.2,92.1,0.001000000000000112,0.92,0.006,0.028,not_significant
+"The Better You Learn, The Smarter You Prune: Towards Efficient Vision-language-action Models via Differentiable Token Pruning",98.4,98.8,-0.0039999999999998925,0.988,0.006,0.01,negative
+"Think Twice, Act Once: Token-Aware Compression and Action Reuse for Efficient Inference in Vision-Language-Action Models",86.6,86.4,0.0019999999999998908,0.864,0.006,0.036,not_significant
+Token Expand-Merge: Training-Free Token Compression for Vision-Language-Action Models,96.5,97.7,-0.01200000000000001,0.976,0.006,0.014,negative
+Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process,95.7,96.8,-0.010999999999999899,0.968,0.006,0.018,negative
+Unified Vision-Language-Action Model,98.8,96.8,0.020000000000000018,0.968,0.006,0.018,certainly_significant
+UniVLA: Learning to Act Anywhere with Task-centric Latent Actions,96.8,92.5,0.04299999999999993,0.924,0.006,0.028,certainly_significant
+Verifier-free Test-Time Sampling for Vision Language Action Models,98.0,95.4,0.025999999999999912,0.954,0.006,0.02,certainly_significant
+VITA-VLA: Efficiently Teaching Vision-Language Models to Act via Action Expert Distillation,99.8,96.8,0.030000000000000027,0.968,0.006,0.018,certainly_significant
+VLA-0: Building State-of-the-Art VLAs with Zero Modification,97.8,98.8,-0.010000000000000009,0.988,0.006,0.01,negative
+VLA-Cache: Efficient Vision-Language-Action Manipulation via Adaptive Token Caching,97.5,97.6,-0.0010000000000000009,0.976,0.006,0.014,negative
+VLA-Pruner: Temporal-Aware Dual-Level Visual Token Pruning for Efficient Vision-Language-Action Inference,98.6,98.7,-0.0010000000000000009,0.988,0.006,0.01,negative
+VLA-RFT: Vision-Language-Action Reinforcement Fine-tuning with Verified Rewards in World Simulators,94.4,96.2,-0.018000000000000016,0.962,0.006,0.018,negative
+VLA-RL: Towards Masterful and General Robotic Manipulation with Scalable Reinforcement Learning,91.8,96.8,-0.050000000000000044,0.968,0.006,0.018,negative
+WorldVLA: Towards Autoregressive Action World Model,96.2,98.1,-0.018999999999999906,0.98,0.006,0.014,negative
+X-VLA: Soft-Prompted Transformer as Scalable Cross-Embodiment Vision-Language-Action Model,98.6,98.8,-0.0020000000000000018,0.988,0.006,0.01,negative
+"A1: A Fully Transparent Open-Source, Adaptive and Efficient Truncated Vision-Language-Action Model",99.8,98.8,0.010000000000000009,0.988,0.006,0.01,certainly_significant
+AcceRL: A Distributed Asynchronous Reinforcement Learning and World Model Framework for Vision-Language-Action Models,100.0,99.8,0.0020000000000000018,0.998,,,certainly_significant
+ACoT-VLA: Action Chain-of-Thought for Vision-Language-Action Models,99.0,99.2,-0.0020000000000000018,0.992,0.006,0.008,negative
+"Act, Think or Abstain: Complexity-Aware Adaptive Inference for Vision-Language-Action Models",90.0,90.0,0.0,0.9,0.006,0.032,not_significant
+Action Draft and Verify: A Self-Verifying Framework for Vision-Language-Action Model,99.4,98.4,0.010000000000000009,0.984,0.006,0.012,possibly_significant
+ActionCodec: What Makes for Good Action Tokenizers,99.8,97.8,0.020000000000000018,0.978,0.006,0.014,certainly_significant
+Adaptive Action Chunking at Inference-time for Vision-Language-Action Models,98.6,97.8,0.008000000000000007,0.978,0.006,0.014,possibly_significant
+ATA: Bridging Implicit Reasoning with Attention-Guided and Action-Guided Inference for Vision-Language Action Models,98.8,98.2,0.006000000000000005,0.982,0.006,0.012,possibly_significant
+AtomicVLA: Unlocking the Potential of Atomic Skill Learning in Robots,98.8,98.8,0.0,0.988,0.006,0.01,not_significant
+AtomVLA: Scalable Post-Training for Robotic Manipulation via Predictive Latent World Models,99.6,98.8,0.008000000000000007,0.988,0.006,0.01,possibly_significant
+Beyond Dense Futures: World Models as Structured Planners for Robotic Manipulation,98.0,98.0,0.0,0.98,0.006,0.014,not_significant
+Causal World Modeling for Robot Control,99.6,99.6,0.0,0.996,,,certainly_significant
+CF-VLA: Efficient Coarse-to-Fine Action Generation for Vision-Language-Action Policies,99.2,100.0,-0.008000000000000007,1.0,,,negative
+Chain of World: World Model Thinking in Latent Motion,97.8,99.2,-0.014000000000000012,0.992,0.006,0.008,negative
+CKT-WAM: Parameter-Efficient Context Knowledge Transfer Between World Action Models,99.8,100.0,-0.0020000000000000018,1.0,,,negative
+CLaD: Planning with Grounded Foresight via Cross-Modal Latent Dynamics,95.7,98.6,-0.028999999999999915,0.986,0.006,0.01,negative
+CLAP: Contrastive Latent Action Pretraining for Learning Vision-Language-Action Models from Human Videos,92.0,94.0,-0.019999999999999907,0.94,0.006,0.024,negative
+Conservative Offline Robot Policy Learning via Posterior-Transition Reweighting,99.2,99.0,0.0020000000000000018,0.99,0.006,0.01,not_significant
+ConsisVLA-4D: Advancing Spatiotemporal Consistency in Efficient 3D-Perception and 4D-Reasoning for Robotic Manipulation,99.8,98.8,0.010000000000000009,0.988,0.006,0.01,certainly_significant
+CORAL: Scalable Multi-Task Robot Learning via LoRA Experts,99.8,99.8,0.0,0.998,,,certainly_significant
+CorridorVLA: Explicit Spatial Constraints for Generative Action Heads via Sparse Anchors,95.8,94.1,0.017000000000000015,0.94,0.006,0.024,possibly_significant
+Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning,100.0,98.8,0.01200000000000001,0.988,0.006,0.01,certainly_significant
+CycleVLA: Proactive Self-Correcting Vision-Language-Action Models via Subtask Backtracking and Minimum Bayes Risk Decoding,98.1,97.6,0.0050000000000000044,0.976,0.006,0.014,not_significant
+DepthCache: Depth-Guided Training-Free Visual Token Merging for Vision-Language-Action Model Inference,97.1,97.6,-0.0050000000000000044,0.976,0.006,0.014,negative
+Device-Conditioned Neural Architecture Search for Efficient Robotic Manipulation,98.0,98.4,-0.004000000000000115,0.984,0.006,0.012,negative
+DFM-VLA: Iterative Action Refinement for Robot Manipulation via Discrete Flow Matching,98.8,96.8,0.020000000000000018,0.968,0.006,0.018,certainly_significant
+DiT4DiT: Jointly Modeling Video Dynamics and Actions for Generalizable Robot Control,99.6,98.8,0.008000000000000007,0.988,0.006,0.01,possibly_significant
+DualCoT-VLA: Visual-Linguistic Chain of Thought via Parallel Reasoning for Vision-Language-Action Models,99.8,99.0,0.008000000000000007,0.99,0.006,0.01,possibly_significant
+DyQ-VLA: Temporal-Dynamic-Aware Quantization for Embodied Vision-Language-Action Models,87.8,88.4,-0.006000000000000005,0.884,0.006,0.034,negative
+DySL-VLA: Efficient Vision-Language-Action Model Inference via Dynamic-Static Layer-Skipping for Robot Manipulation,98.2,98.4,-0.002000000000000113,0.984,0.006,0.012,negative
+Efficient Long-Horizon Vision-Language-Action Models via Static-Dynamic Disentanglement,97.6,98.3,-0.007000000000000006,0.984,0.006,0.012,negative
+Fast-dVLA: Accelerating Discrete Diffusion VLA to Real-Time Performance,98.8,98.8,0.0,0.988,0.006,0.01,not_significant
+Fast-ThinkAct: Efficient Vision-Language-Action Reasoning via Verbalizable Latent Planning,97.2,95.4,0.017999999999999905,0.954,0.006,0.02,possibly_significant
+Fast-WAM: Do World Action Models Need Test-time Future Imagination?,100.0,99.8,0.0020000000000000018,0.998,,,certainly_significant
+FASTER: Rethinking Real-Time Flow VLAs,99.2,99.4,-0.002000000000000113,0.994,0.006,0.006,negative
+FlowHijack: A Dynamics-Aware Backdoor Attack on Flow-Matching Vision-Language-Action Models,98.8,98.8,0.0,0.988,0.006,0.01,not_significant
+From Noise to Intent: Anchoring Generative VLA Policies with Residual Bridges,98.6,99.2,-0.006000000000000005,0.992,0.006,0.008,negative
+From Pixels to Tokens: A Systematic Study of Latent Action Supervision for Vision-Language-Action Models,98.6,98.8,-0.0020000000000000018,0.988,0.006,0.01,negative
+Generative Control as Optimization: Time Unconditional Flow Matching for Adaptive and Robust Robotic Control,98.6,98.8,-0.0020000000000000018,0.988,0.006,0.01,negative
+GST-VLA: Structured Gaussian Spatial Tokens for 3D Depth-Aware Vision-Language-Action Models,97.4,95.8,0.016000000000000125,0.958,0.006,0.02,possibly_significant
+HeiSD: Hybrid Speculative Decoding for Embodied Vision-Language-Action Models with Kinematic Awareness,71.0,62.4,0.08599999999999997,0.624,0.006,0.062,certainly_significant
+HoloBrain-0 Technical Report,99.6,98.8,0.008000000000000007,0.988,0.006,0.01,possibly_significant
+JEPA-VLA: Video Predictive Embedding is Needed for VLA Models,98.0,98.3,-0.0030000000000000027,0.984,0.006,0.012,negative
+Joint-Aligned Latent Action: Towards Scalable VLA Pretraining in the Wild,98.2,98.8,-0.006000000000000005,0.988,0.006,0.01,negative
+KERV: Kinematic-Rectified Speculative Decoding for Embodied VLA Models,72.3,70.0,0.02300000000000002,0.7,0.006,0.056,possibly_significant
+LaMP: Learning Vision-Language-Action Policies with 3D Scene Flow as Latent Motion Prior,99.8,98.8,0.010000000000000009,0.988,0.006,0.01,certainly_significant
+LangForce: Bayesian Decomposition of Vision Language Action Models via Latent Action Queries,99.6,98.8,0.008000000000000007,0.988,0.006,0.01,possibly_significant
+LangGap: Diagnosing and Closing the Language Gap in Vision-Language-Action Models,98.0,100.0,-0.020000000000000018,1.0,,,negative
+Language-Grounded Decoupled Action Representation for Robotic Manipulation,99.2,99.2,0.0,0.992,0.006,0.008,not_significant
+LAR-MoE: Latent-Aligned Routing for Mixture of Experts in Robotic Imitation Learning,99.0,98.0,0.010000000000000009,0.98,0.006,0.014,possibly_significant
+Latent Bridge: Feature Delta Prediction for Efficient Dual-System Vision-Language-Action Model Inference,97.67,98.17,-0.0050000000000000044,0.982,0.006,0.012,negative
+Learning Diffusion Policy from Primitive Skills for Robot Manipulation,99.8,95.4,0.04399999999999993,0.954,0.006,0.02,certainly_significant
+Learning Physics from Pretrained Video Models: A Multimodal Continuous and Sequential World Interaction Models for Robotic Manipulation,99.6,97.0,0.026000000000000023,0.97,0.006,0.016,certainly_significant
+Learning to Accelerate Vision-Language-Action Models through Adaptive Visual Token Caching,86.2,86.6,-0.0040000000000000036,0.866,0.006,0.036,negative
+Libra-VLA: Achieving Learning Equilibrium via Asynchronous Coarse-to-Fine Dual-System,99.4,98.8,0.006000000000000116,0.988,0.006,0.01,possibly_significant
+$M^2$-VLA: Boosting Vision-Language Models for Generalizable Manipulation via Layer Mixture and Meta-Skills,99.0,95.4,0.03599999999999992,0.954,0.006,0.02,certainly_significant
+Mask World Model: Predicting What Matters for Robust Robot Policy Learning,100.0,99.2,0.008000000000000007,0.992,0.006,0.008,certainly_significant
+MMaDA-VLA: Large Diffusion Vision-Language-Action Model with Unified Multi-Modal Instruction and Generation,99.8,99.4,0.0039999999999998925,0.994,0.006,0.006,not_significant
+Neural Implicit Action Fields: From Discrete Waypoints to Continuous Functions for Vision-Language-Action Models,100.0,98.8,0.01200000000000001,0.988,0.006,0.01,certainly_significant
+OFlow: Injecting Object-Aware Temporal Flow Matching for Robust Robotic Manipulation,99.0,99.0,0.0,0.99,0.006,0.01,not_significant
+OmniVLA-RL: A Vision-Language-Action Model with Spatial Understanding and Online RL,99.2,98.8,0.0040000000000000036,0.988,0.006,0.01,not_significant
+PALM: Progress-Aware Policy Learning via Affordance Reasoning for Long-Horizon Robotic Manipulation,96.7,93.1,0.03600000000000014,0.93,0.006,0.026,certainly_significant
+Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks,98.4,98.8,-0.0039999999999998925,0.988,0.006,0.01,negative
+PokeVLA: Empowering Pocket-Sized Vision-Language-Action Model with Comprehensive World Knowledge Guidance,99.6,99.6,0.0,0.996,,,certainly_significant
+Pri4R: Learning World Dynamics for Vision-Language-Action Models with Privileged 4D Representation,98.6,98.2,0.0040000000000000036,0.982,0.006,0.012,not_significant
+Privileged Foresight Distillation: Zero-Cost Future Correction for World Action Models,99.2,100.0,-0.008000000000000007,1.0,,,negative
+ProgressVLA: Progress-Guided Diffusion Policy for Vision-Language Robotic Manipulation,96.4,96.3,0.001000000000000112,0.964,0.006,0.018,not_significant
+QuantVLA: Scale-Calibrated Post-Training Quantization for Vision-Language-Action Models,98.0,99.0,-0.010000000000000009,0.99,0.006,0.01,negative
+QVLA: Not All Channels Are Equal in Vision-Language-Action Model's Quantization,97.6,98.4,-0.008000000000000118,0.984,0.006,0.012,negative
+Recurrent-Depth VLA: Implicit Test-Time Compute Scaling of Vision-Language-Action Models via Latent Iterative Reasoning,99.0,97.2,0.018000000000000016,0.972,0.006,0.016,certainly_significant
+Reshaping Action Error Distributions for Reliable Vision-Language-Action Models,100.0,99.2,0.008000000000000007,0.992,0.006,0.008,certainly_significant
+Restoring Linguistic Grounding in VLA Models via Train-Free Attention Recalibration,99.8,98.8,0.010000000000000009,0.988,0.006,0.01,certainly_significant
+"Rethinking Visual-Language-Action Model Scaling: Alignment, Mixture, and Regularization",96.2,98.2,-0.019999999999999907,0.982,0.006,0.012,negative
+ReViP: Mitigating False Completion in Vision-Language-Action Models with Vision-Proprioception Rebalance,98.8,98.8,0.0,0.988,0.006,0.01,not_significant
+RoboAlign: Learning Test-Time Reasoning for Language-Action Alignment in Vision-Language-Action Models,96.0,91.6,0.04400000000000004,0.916,0.006,0.028,certainly_significant
+Robotic Manipulation is Vision-to-Geometry Mapping ($f(v) \rightarrow G$): Vision-Geometry Backbones over Language and Video Models,99.6,100.0,-0.0040000000000000036,1.0,,,negative
+ROCKET: Residual-Oriented Multi-Layer Alignment for Spatially-Aware Vision-Language-Action Models,99.8,99.8,0.0,0.998,,,certainly_significant
+SaiVLA-0: Cerebrum--Pons--Cerebellum Tripartite Architecture for Compute-Aware Vision-Language-Action,100.0,98.8,0.01200000000000001,0.988,0.006,0.01,certainly_significant
+"Say, Dream, and Act: Learning Video World Models for Instruction-Driven Robot Manipulation",99.2,98.8,0.0040000000000000036,0.988,0.006,0.01,not_significant
+"See, Plan, Rewind: Progress-Aware Vision-Language-Action Models for Robust Robotic Manipulation",95.4,96.8,-0.013999999999999901,0.968,0.006,0.018,negative
+Shallow-π: Knowledge Distillation for Flow-based VLAs,98.0,99.0,-0.010000000000000009,0.99,0.006,0.01,negative
+SimVLA: A Simple VLA Baseline for Robotic Manipulation,99.8,99.2,0.006000000000000005,0.992,0.006,0.008,possibly_significant
+SmoothVLA: Aligning Vision-Language-Action Models with Physical Constraints via Intrinsic Smoothness Optimization,94.2,92.1,0.02100000000000013,0.92,0.006,0.028,possibly_significant
+SnapFlow: One-Step Action Generation for Flow-Matching VLAs via Progressive Self-Distillation,100.0,100.0,0.0,1.0,,,certainly_significant
+Speedup Patch: Learning a Plug-and-Play Policy to Accelerate Embodied Manipulation,99.4,98.8,0.006000000000000116,0.988,0.006,0.01,possibly_significant
+ST-$π$: Structured SpatioTemporal VLA for Robotic Manipulation,98.3,98.2,0.0010000000000000009,0.982,0.006,0.012,not_significant
+Stable Language Guidance for Vision-Language-Action Models,99.2,98.8,0.0040000000000000036,0.988,0.006,0.01,not_significant
+StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing,98.6,98.8,-0.0020000000000000018,0.988,0.006,0.01,negative
+StarVLA-$α$: Reducing Complexity in Vision-Language-Action Systems,99.8,98.8,0.010000000000000009,0.988,0.006,0.01,certainly_significant
+StreamingVLA: Streaming Vision-Language-Action Model with Action Flow Matching and Adaptive Early Observation,96.6,99.2,-0.026000000000000023,0.992,0.006,0.008,negative
+StreamVLA: Breaking the Reason-Act Cycle via Completion-State Gating,99.4,98.8,0.006000000000000116,0.988,0.006,0.01,possibly_significant
+Test-Time Perturbation Learning with Delayed Feedback for Vision-Language-Action Models,72.0,92.0,-0.20000000000000007,0.92,0.006,0.028,negative
+Thinking in Text and Images: Interleaved Vision--Language Reasoning Traces for Long-Horizon Robot Manipulation,95.8,97.8,-0.020000000000000018,0.978,0.006,0.014,negative
+Towards Long-Lived Robots: Continual Learning VLA Models via Reinforcement Fine-Tuning,99.2,98.8,0.0040000000000000036,0.988,0.006,0.01,not_significant
+Towards Practical World Model-based Reinforcement Learning for Vision-Language-Action Models,96.6,92.4,0.041999999999999926,0.924,0.006,0.028,certainly_significant
+TTQ: Activation-Aware Test-Time Quantization to Accelerate LLM Inference On The Fly,100.0,100.0,0.0,1.0,,,certainly_significant
+Universal Pose Pretraining for Generalizable Vision-Language-Action Policies,98.0,98.8,-0.008000000000000007,0.988,0.006,0.01,negative
+Unmasking the Illusion of Embodied Reasoning in Vision-Language-Action Models,97.6,99.6,-0.020000000000000018,0.996,,,negative
+VISTA: Enhancing Visual Conditioning via Track-Following Preference Optimization in Vision-Language-Action Models,91.6,92.5,-0.009000000000000119,0.924,0.006,0.028,negative
+VLA-Adapter: An Effective Paradigm for Tiny-Scale Vision-Language-Action Model,99.2,98.8,0.0040000000000000036,0.988,0.006,0.01,not_significant
+VLA-GSE: Boosting Parameter-Efficient Fine-Tuning in VLA with Generalized and Specialized Experts,99.8,99.2,0.006000000000000005,0.992,0.006,0.008,possibly_significant
+VLA-IAP: Training-Free Visual Token Pruning via Interaction Alignment for Vision-Language-Action Models,99.6,98.4,0.0119999999999999,0.984,0.006,0.012,possibly_significant
+VLA-InfoEntropy: A Training-Free Vision-Attention Information Entropy Approach for Vision-Language-Action Models Inference Acceleration and Success,87.6,86.6,0.009999999999999898,0.866,0.006,0.036,possibly_significant
+VLA-JEPA: Enhancing Vision-Language-Action Model with Latent World Model,99.6,98.8,0.008000000000000007,0.988,0.006,0.01,possibly_significant
+VLA-Thinker: Boosting Vision-Language-Action Models through Thinking-with-Image Reasoning,99.0,98.8,0.0020000000000000018,0.988,0.006,0.01,not_significant
+VolumeDP: Modeling Volumetric Representation for Manipulation Policy Learning,95.9,92.5,0.03400000000000003,0.924,0.006,0.028,certainly_significant
+When Vision Overrides Language: Evaluating and Mitigating Counterfactual Failures in VLAs,98.2,98.8,-0.006000000000000005,0.988,0.006,0.01,negative
+World-Value-Action Model: Implicit Planning for Vision-Language-Action Systems,100.0,99.2,0.008000000000000007,0.992,0.006,0.008,certainly_significant
+World2Act: Latent Action Post-Training via Skill-Compositional World Models,100.0,100.0,0.0,1.0,,,certainly_significant
+WoVR: World Models as Reliable Simulators for Post-Training VLA Policies with RL,82.0,48.0,0.33999999999999997,0.48,0.006,0.074,certainly_significant
+Xiaomi-Robotics-0: An Open-Sourced Vision-Language-Action Model with Real-Time Execution,100.0,99.8,0.0020000000000000018,0.998,,,certainly_significant
+You've Got a Golden Ticket: Improving Generative Robot Policies With A Single Noise Vector,100.0,92.0,0.07999999999999996,0.92,0.006,0.028,certainly_significant
+One Token Per Frame: Reconsidering Visual Bandwidth in World Models for VLA Policy,99.6,98.8,0.008000000000000007,0.988,0.006,0.01,possibly_significant
+OA-WAM: Object-Addressable World Action Model for Robust Robot Manipulation,99.0,99.6,-0.006000000000000005,0.996,,,negative
+PRTS: A Primitive Reasoning and Tasking System via Contrastive Representations,99.8,99.8,0.0,0.998,,,certainly_significant
+TAG: Target-Agnostic Guidance for Stable Object-Centric Inference in Vision-Language-Action Models,99.2,99.0,0.0020000000000000018,0.99,0.006,0.01,not_significant
+Global Prior Meets Local Consistency: Dual-Memory Augmented Vision-Language-Action Model for Efficient Robotic Manipulation,99.8,98.8,0.010000000000000009,0.988,0.006,0.01,certainly_significant
+VLANeXt: Recipes for Building Strong VLA Models,99.2,99.1,0.0010000000000000009,0.992,0.006,0.008,not_significant
+HBVLA: Pushing 1-Bit Post-Training Quantization for Vision-Language-Action Models,97.8,76.0,0.21799999999999997,0.76,0.006,0.05,certainly_significant
+IVRA: Improving Visual-Token Relations for Robot Action Policy with Training-Free Hint-Based Guidance,99.9,99.3,0.006000000000000116,0.992,0.006,0.008,possibly_significant
+VAT: Vision Action Transformer by Unlocking Full Representation of ViT,99.4,98.8,0.006000000000000116,0.988,0.006,0.01,possibly_significant
+Much Ado About Noising: Dispelling the Myths of Generative Robotic Control,95.8,97.4,-0.016000000000000125,0.974,0.006,0.016,negative
+Expertise Need Not Monopolize: Action-Specialized Mixture of Experts for Vision-Language-Action Learning,95.0,98.8,-0.038000000000000034,0.988,0.006,0.01,negative
+3D CAVLA: Leveraging Depth and 3D Context to Generalize Vision Language Action Models for Unseen Tasks,99.8,98.8,0.010000000000000009,0.988,0.006,0.01,certainly_significant
+VGGT-$\Omega$,99.2,98.8,0.0040000000000000036,0.988,0.006,0.01,not_significant
+IntentVLA: Short-Horizon Intent Modeling for Aliased Robot Manipulation,99.7,99.6,0.0010000000000000009,0.996,,,certainly_significant
+BlockVLA: Accelerating Autoregressive VLA via Block Diffusion Finetuning,97.6,96.6,0.010000000000000009,0.966,0.006,0.018,possibly_significant
+FrameSkip: Learning from Fewer but More Informative Frames in VLA Training,99.0,99.0,0.0,0.99,0.006,0.01,not_significant
+Realtime-VLA FLASH: Speculative Inference Framework for Diffusion-based VLAs,99.2,98.8,0.0040000000000000036,0.988,0.006,0.01,not_significant
+"Guide, Think, Act: Interactive Embodied Reasoning in Vision-Language-Action Models",98.8,99.0,-0.0020000000000000018,0.99,0.006,0.01,negative
+DreamAvoid: Critical-Phase Test-Time Dreaming to Avoid Failures in VLA Policies,98.5,99.0,-0.0050000000000000044,0.99,0.006,0.01,negative
+Beyond World-Frame Action Heads: Motion-Centric Action Frames for Vision-Language-Action Models,98.8,98.8,0.0,0.988,0.006,0.01,not_significant
+Learning Action Manifold with Multi-view Latent Priors for Robotic Manipulation,99.8,99.8,0.0,0.998,,,certainly_significant
+See What Matters: Differentiable Grid Sample Pruning for Generalizable Vision-Language-Action Model,98.8,98.8,0.0,0.988,0.006,0.01,not_significant
+Premover: Fast Vision-Language-Action Control by Acting Before Instructions Are Complete,99.1,97.4,0.016999999999999904,0.974,0.006,0.016,certainly_significant
+From Imagined Futures to Executable Actions: Mixture of Latent Actions for Robot Manipulation,99.5,95.0,0.04500000000000004,0.95,0.006,0.022,certainly_significant
+Dynamic Execution Commitment of Vision-Language-Action Models,99.4,99.8,-0.0039999999999998925,0.998,,,negative
+ALAM: Algebraically Consistent Latent Action Model for Vision-Language-Action Models,99.6,98.8,0.008000000000000007,0.988,0.006,0.01,possibly_significant
+PriorVLA: Prior-Preserving Adaptation for Vision-Language-Action Models,99.8,98.8,0.010000000000000009,0.988,0.006,0.01,certainly_significant
+CapVector: Learning Transferable Capability Vectors in Parametric Space for Vision-Language-Action Models,98.4,99.2,-0.007999999999999896,0.992,0.006,0.008,negative
+LoopVLA: Learning Sufficiency in Recurrent Refinement for Vision-Language-Action Models,100.0,98.8,0.01200000000000001,0.988,0.006,0.01,certainly_significant
+ECHO: Continuous Hierarchical Memory for Vision-Language-Action Models,98.8,98.4,0.0039999999999998925,0.984,0.006,0.012,not_significant
+ElasticFlow: One-Step Physics-Consistent Policy with Elastic Time Horizons for Language-Guided Manipulation,99.3,99.4,-0.001000000000000112,0.994,0.006,0.006,negative
+ForgeVLA: Federated Vision-Language-Action Learning without Language Annotations,98.6,97.6,0.010000000000000009,0.976,0.006,0.014,possibly_significant
+Failing Forward: Adaptive Failure-Informed Learning for Vision-Language-Action Models,99.7,98.2,0.015000000000000013,0.982,0.006,0.012,certainly_significant

@@ -11,6 +11,7 @@ task_embedding_scale: 10.0
 vision_backbone: dino
 dino_model: dinov2_vitb14
 dino_feature_mode: cls
+image_norm: clip
 use_transformer: false
 pretrained_visual: true
 train_visual_encoder: true
@@ -44,5 +45,5 @@ eval_steps:
 - 40000
 run_name: task_D_D_step40000
 run_prefix: shortcut_solvability
-checkpoint_dir: <CHECKPOINT_ROOT>/task_D_D_step40000/checkpoints
+checkpoint_dir: <CHECKPOINT_ROOT>/shortcut_calvin/calvin_D_D
 eval_dir: <OUTPUT_ROOT>/task_D_D_step40000/eval

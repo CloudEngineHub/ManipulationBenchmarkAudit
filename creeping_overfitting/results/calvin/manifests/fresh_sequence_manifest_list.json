@@ -1,0 +1,48 @@
+{
+  "created_utc": "2026-05-26T06:11:34Z",
+  "launcher_use": {
+    "condition_tag_field": "condition_tag",
+    "do_not_use_files": [
+      "results/calvin/sequence_manifests/abc_d_fresh_sequence_151seq_seed2026052601.json",
+      "results/calvin/sequence_manifests/abc_d_fresh_sequence_151seq_seed2026052602.json"
+    ],
+    "eval_sequence_reconstruction": "use row eval_sequence exactly",
+    "forbidden_fresh_sequence_reset_env_vars": [
+      "CALVIN_RESET_BANK",
+      "RESET_BANK",
+      "CALVIN_RESET_PROTOCOL"
+    ],
+    "initial_state_reconstruction": "reconstruct from ordered initial_state_items and preserve the stored key order",
+    "manifest_path_field": "curated_repo_relative_path",
+    "required_manifest_row_fields": [
+      "global_index",
+      "index",
+      "initial_state_items",
+      "eval_sequence"
+    ],
+    "runtime_source_of_truth": "curated manifest rows"
+  },
+  "manifests": [
+    {
+      "condition_tag": "fresh_sequence_seed2026052601",
+      "curated_repo_relative_path": "paper_artifacts/calvin_creeping_overfitting/fresh_sequence_1000_20260526/abc_d_fresh_sequence_1000seq_seed2026052601.json",
+      "num_sequences": 1000,
+      "sample_kind": "fresh_sequence_stratified",
+      "sample_seed": 2026052601,
+      "source_absolute_path": "results/calvin/sequence_manifests/abc_d_fresh_sequence_1000seq_seed2026052601.json",
+      "source_path": "results/calvin/sequence_manifests/abc_d_fresh_sequence_1000seq_seed2026052601.json"
+    },
+    {
+      "condition_tag": "fresh_sequence_seed2026052602",
+      "curated_repo_relative_path": "paper_artifacts/calvin_creeping_overfitting/fresh_sequence_1000_20260526/abc_d_fresh_sequence_1000seq_seed2026052602.json",
+      "num_sequences": 1000,
+      "sample_kind": "fresh_sequence_stratified",
+      "sample_seed": 2026052602,
+      "source_absolute_path": "results/calvin/sequence_manifests/abc_d_fresh_sequence_1000seq_seed2026052602.json",
+      "source_path": "results/calvin/sequence_manifests/abc_d_fresh_sequence_1000seq_seed2026052602.json"
+    }
+  ],
+  "package_repo_relative_path": "paper_artifacts/calvin_creeping_overfitting/fresh_sequence_1000_20260526",
+  "repo_path": "<EVAL_POLICIES_CORL_ROOT>",
+  "schema": "calvin_fresh_sequence_manifest_list_v1"
+}

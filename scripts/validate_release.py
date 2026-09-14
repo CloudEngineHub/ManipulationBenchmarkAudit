@@ -4,12 +4,15 @@
 from __future__ import annotations
 
 import argparse
+import contextlib
 import csv
 import hashlib
 import importlib.util
+import io
 import json
 import re
 import sys
+import tempfile
 from pathlib import Path
 from typing import Any
 
@@ -26,6 +29,7 @@ REQUIRED_TOP_LEVEL = {
     "leaderboards",
     "provenance",
     "scripts",
+    "analysis",
     "CLAIMS.md",
     "public_manifest.json",
     "README.md",
@@ -144,8 +148,26 @@ EXPECTED_SIGNIFICANCE_PARAMS = {
     ),
 }
 
-ALLOWED_EXTENSIONS = {".csv", ".json", ".yaml", ".yml", ".md", ".py"}
+ALLOWED_TEXT_EXTENSIONS = {".csv", ".json", ".md", ".py", ".txt", ".yaml"}
 ALLOWED_EXTENSIONLESS = {"LICENSE", "SHA256SUMS", ".gitignore"}
+ALLOWED_PRUNED_INIT_ROOTS = {
+    "creeping_overfitting/artifacts/libero/init_state_layer2_4suite_2500_seed20260519",
+    "statistical_significance/libero_goal_5x5k/shared/init_state_goal_5000",
+}
+ALLOWED_CALVIN_RESET_BANKS = {
+    "creeping_overfitting/results/calvin/reset_banks/abc_d_official_d_table_resets_1000seq_seed0.npz",
+}
+ALLOWED_SIMPLERENV_ASSETS = {
+    "creeping_overfitting/artifacts/simplerenv/protocol_abcde/assets/custom/models/render_candidate_blue_hybrid_v4/collision.obj",
+    "creeping_overfitting/artifacts/simplerenv/protocol_abcde/assets/custom/models/render_candidate_blue_hybrid_v4/textured.dae",
+    "creeping_overfitting/artifacts/simplerenv/protocol_abcde/assets/custom/models/render_candidate_red_corrected_v6e/collision.obj",
+    "creeping_overfitting/artifacts/simplerenv/protocol_abcde/assets/custom/models/render_candidate_red_corrected_v6e/textured.dae",
+    "creeping_overfitting/artifacts/simplerenv/protocol_abcde/assets/custom/models/render_candidate_white_offwhite_hybrid_v4/collision.obj",
+    "creeping_overfitting/artifacts/simplerenv/protocol_abcde/assets/custom/models/render_candidate_white_offwhite_hybrid_v4/textured.dae",
+}
+ALLOWED_SHA256_SIDECARS = {
+    "creeping_overfitting/configs/simplerenv_protocol_abcde_stack_v1.json.sha256",
+}
 EXCLUDED_EXTENSIONS = {
     ".7z",
     ".avi",
@@ -213,7 +235,65 @@ SECRET_PATTERNS = [
     re.compile(r"(?i)\b(password|api[_-]?key|secret|access[_-]?token|refresh[_-]?token)\b\s*[:=]\s*[\"']?[A-Za-z0-9_./+=:-]{12,}"),
 ]
 MAX_TEXT_FILE_BYTES = 5_000_000
+MAX_CSV_FILE_BYTES = 8_000_000
+MAX_SMALL_BINARY_FILE_BYTES = 25_000_000
 HEX64_RE = re.compile(r"^[0-9a-f]{64}$")
+
+
+REQUIRED_DSD_FILES = {
+    "data_source_dependency/README.md",
+    "data_source_dependency/artifact_layout.md",
+    "data_source_dependency/configs/widowx_scripted_dsd_official_4x24.yaml",
+    "data_source_dependency/configs/train/train_stack_small_open6_tailpad5_padterm_20260519T0130Z.yaml",
+    "data_source_dependency/configs/train/train_carrot_yawcanon_padterm_20260521T2213Z.yaml",
+    "data_source_dependency/configs/train/train_spoon_small_open6_tailpad5_padterm_20260519T0502Z.yaml",
+    "data_source_dependency/configs/train/train_eggplant_small_open6_tailpad5_padterm_20260519T0502Z.yaml",
+    "data_source_dependency/code/requirements.txt",
+    "data_source_dependency/code/src/data_source_dependency/__init__.py",
+    "data_source_dependency/code/src/data_source_dependency/collectors/scripted_widowx_stack.py",
+    "data_source_dependency/code/src/data_source_dependency/widowx/data.py",
+    "data_source_dependency/code/src/data_source_dependency/widowx/eval_official.py",
+    "data_source_dependency/code/src/data_source_dependency/widowx/eval_replay.py",
+    "data_source_dependency/code/src/data_source_dependency/widowx/model.py",
+    "data_source_dependency/code/src/data_source_dependency/widowx/train_vits_mlp.py",
+    "data_source_dependency/code/src/data_source_dependency/widowx/validate_dataset.py",
+    "data_source_dependency/results/scripted_widowx/results.csv",
+    "data_source_dependency/results/scripted_widowx/trials.csv",
+    "data_source_dependency/results/scripted_widowx/aggregate_summary.json",
+}
+
+REQUIRED_SHORTCUT_FILES = {
+    "shortcut_solvability/README.md",
+    "shortcut_solvability/code/shortcut_policy/calvin.py",
+    "shortcut_solvability/code/shortcut_policy/common.py",
+    "shortcut_solvability/code/shortcut_policy/libero.py",
+    "shortcut_solvability/code/shortcut_policy/models.py",
+    "shortcut_solvability/configs/libero/libero_spatial_step13425.yaml",
+    "shortcut_solvability/configs/libero/libero_object_step16110.yaml",
+    "shortcut_solvability/configs/libero/libero_goal_step5370.yaml",
+    "shortcut_solvability/configs/libero/libero_10_step15215.yaml",
+    "shortcut_solvability/configs/calvin/task_D_D_step40000.yaml",
+    "shortcut_solvability/configs/calvin/task_ABC_D_step100000.yaml",
+    "shortcut_solvability/configs/calvin/task_ABCD_D_step100000.yaml",
+    "shortcut_solvability/results/calvin/official_1000_eval_sequences.json",
+}
+
+REQUIRED_ANALYSIS_FILES = {
+    "analysis/README.md",
+    "analysis/run_analysis.py",
+    "analysis/paper_inputs/creeping_overfitting_simplerenv.csv",
+    "analysis/paper_inputs/stat_sig_calvin_abc_d_cutoff_data.csv",
+    "analysis/paper_inputs/stat_sig_libero_goal_cutoff_data.csv",
+    "analysis/paper_inputs/stat_sig_libero_object_cutoff_data.csv",
+    "analysis/paper_inputs/stat_sig_libero_spatial_cutoff_data.csv",
+    "analysis/paper_inputs/stat_sig_robocasa_rss24_cutoff_data.csv",
+    "analysis/paper_inputs/stat_sig_robotwin2_hard_randomized_cutoff_data.csv",
+    "analysis/paper_inputs/stat_sig_simplerenv_widowx_bridge_cutoff_data.csv",
+    "analysis/release_current_values/creeping_overfitting_confidence_intervals.csv",
+    "analysis/release_current_values/creeping_overfitting_simplerenv_plot_data.csv",
+    "analysis/release_current_values/statistical_significance_bucket_comparison.csv",
+    "analysis/release_current_values/statistical_significance_pie_counts.csv",
+}
 
 
 def iter_release_files(root: Path) -> list[Path]:
@@ -250,6 +330,53 @@ def load_category_generator_module(root: Path) -> Any:
     return module
 
 
+def load_exact_input_validator_module(root: Path) -> Any:
+    sys.dont_write_bytecode = True
+    script = root / "creeping_overfitting" / "code" / "validate_exact_inputs.py"
+    spec = importlib.util.spec_from_file_location("validate_exact_inputs", script)
+    if spec is None or spec.loader is None:
+        raise RuntimeError("cannot import creeping_overfitting/code/validate_exact_inputs.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def load_analysis_module(root: Path) -> Any:
+    sys.dont_write_bytecode = True
+    script = root / "analysis" / "run_analysis.py"
+    spec = importlib.util.spec_from_file_location("release_analysis", script)
+    if spec is None or spec.loader is None:
+        raise RuntimeError("cannot import analysis/run_analysis.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def rel_under(rel: Path, prefix: str) -> bool:
+    rel_posix = rel.as_posix()
+    return rel_posix == prefix or rel_posix.startswith(f"{prefix}/")
+
+
+def is_allowed_pruned_init(rel: Path) -> bool:
+    return rel.suffix.lower() == ".pruned_init" and any(rel_under(rel, prefix) for prefix in ALLOWED_PRUNED_INIT_ROOTS)
+
+
+def is_allowed_calvin_reset_bank(rel: Path) -> bool:
+    return rel.as_posix() in ALLOWED_CALVIN_RESET_BANKS
+
+
+def is_allowed_simplerenv_asset(rel: Path) -> bool:
+    return rel.as_posix() in ALLOWED_SIMPLERENV_ASSETS
+
+
+def is_allowed_sha256_sidecar(rel: Path) -> bool:
+    return rel.as_posix() in ALLOWED_SHA256_SIDECARS
+
+
+def is_allowed_small_binary_artifact(rel: Path) -> bool:
+    return is_allowed_pruned_init(rel) or is_allowed_calvin_reset_bank(rel) or is_allowed_simplerenv_asset(rel)
+
+
 def validate_shape(root: Path, errors: list[str]) -> None:
     present = {path.name for path in root.iterdir()}
     missing = sorted(REQUIRED_TOP_LEVEL - present)
@@ -263,6 +390,7 @@ def validate_shape(root: Path, errors: list[str]) -> None:
         "leaderboards",
         "provenance",
         "scripts",
+        "analysis",
     ]:
         if not (root / required_dir).is_dir():
             errors.append(f"required top-level directory missing: {required_dir}")
@@ -303,16 +431,24 @@ def validate_parseability(files: list[Path], root: Path, errors: list[str]) -> d
 def validate_artifact_types(files: list[Path], root: Path, errors: list[str]) -> None:
     for path in files:
         rel = path.relative_to(root)
+        lowered_parts = {part.lower() for part in rel.parts}
         suffix = path.suffix.lower()
-        if suffix in EXCLUDED_EXTENSIONS:
+        allowed_binary = is_allowed_small_binary_artifact(rel)
+        allowed_text = suffix in ALLOWED_TEXT_EXTENSIONS or is_allowed_sha256_sidecar(rel)
+        if suffix in EXCLUDED_EXTENSIONS and not allowed_binary:
             errors.append(f"excluded artifact extension present: {rel}")
-        if suffix and suffix not in ALLOWED_EXTENSIONS:
+        if suffix and not allowed_text and not allowed_binary:
             errors.append(f"unexpected file extension in release: {rel}")
         if not suffix and path.name not in ALLOWED_EXTENSIONLESS:
             errors.append(f"unexpected extensionless file in release: {rel}")
-        if path.stat().st_size > MAX_TEXT_FILE_BYTES:
+        if allowed_binary:
+            size_limit = MAX_SMALL_BINARY_FILE_BYTES
+        elif suffix == ".csv":
+            size_limit = MAX_CSV_FILE_BYTES
+        else:
+            size_limit = MAX_TEXT_FILE_BYTES
+        if path.stat().st_size > size_limit:
             errors.append(f"file exceeds lightweight size limit: {rel} ({path.stat().st_size} bytes)")
-        lowered_parts = {part.lower() for part in rel.parts}
         blocked = sorted((lowered_parts & EXCLUDED_PATH_PARTS) - {".git"})
         if blocked:
             errors.append(f"excluded path component {blocked} present in {rel}")
@@ -333,6 +469,8 @@ def validate_credentials(files: list[Path], root: Path, errors: list[str]) -> No
         rel = path.relative_to(root)
         if path.name.lower() in risky_names:
             errors.append(f"credential-like file name present: {rel}")
+            continue
+        if is_allowed_small_binary_artifact(rel):
             continue
         try:
             text = path.read_text(errors="ignore")
@@ -401,11 +539,21 @@ def validate_sha256sums(files: list[Path], root: Path, errors: list[str]) -> Non
 def validate_manifest(root: Path, errors: list[str]) -> dict[str, Any]:
     manifest = json.loads((root / "public_manifest.json").read_text())
     groups = {group["directory"]: group for group in manifest.get("artifact_groups", [])}
-    for required in ["shortcut_solvability", "statistical_significance", "creeping_overfitting", "data_source_dependency", "leaderboards", "provenance"]:
+    for required in ["shortcut_solvability", "statistical_significance", "creeping_overfitting", "data_source_dependency", "leaderboards", "provenance", "analysis"]:
         if required not in groups:
             errors.append(f"public_manifest.json missing artifact group: {required}")
     if not manifest.get("source_candidates_used"):
         errors.append("public_manifest.json must record source candidates")
+    payload_folder = manifest.get("package_policy", {}).get("external_payload_folder", {})
+    if "owner" in payload_folder:
+        errors.append("public_manifest.json external_payload_folder must not expose a personal owner email")
+    if "planned_children" in payload_folder:
+        errors.append("public_manifest.json external_payload_folder should record actual children, not planned_children")
+    required_children = {"datasets", "checkpoints", "evaluation_inputs"}
+    children = payload_folder.get("children", {})
+    missing_children = sorted(required_children - set(children))
+    if missing_children:
+        errors.append(f"public_manifest.json external_payload_folder missing children: {missing_children}")
     return manifest
 
 
@@ -698,6 +846,48 @@ def validate_significance_categories(root: Path, errors: list[str]) -> dict[str,
     }
 
 
+
+def validate_required_file_set(root: Path, required: set[str], label: str, errors: list[str]) -> None:
+    missing = sorted(rel for rel in required if not (root / rel).is_file())
+    if missing:
+        errors.append(f"{label} missing required files: {missing}")
+
+
+def validate_diagnostic_integrations(root: Path, errors: list[str]) -> None:
+    validate_required_file_set(root, REQUIRED_DSD_FILES, "data_source_dependency", errors)
+    validate_required_file_set(root, REQUIRED_SHORTCUT_FILES, "shortcut_solvability", errors)
+    validate_required_file_set(root, REQUIRED_ANALYSIS_FILES, "analysis", errors)
+
+
+def validate_exact_inputs(root: Path, errors: list[str]) -> dict[str, Any]:
+    try:
+        module = load_exact_input_validator_module(root)
+        buffer = io.StringIO()
+        with contextlib.redirect_stdout(buffer):
+            module.main()
+        output = buffer.getvalue().strip()
+        return {"status": "passed", "output": output}
+    except BaseException as exc:  # pragma: no cover - fail loudly in validation output
+        errors.append(f"creeping_overfitting exact-input validation failed: {type(exc).__name__}: {exc}")
+        return {"status": "failed"}
+
+
+def validate_analysis_outputs(root: Path, errors: list[str]) -> dict[str, Any]:
+    try:
+        module = load_analysis_module(root)
+        with tempfile.TemporaryDirectory(prefix="release_analysis_validate_") as tmp:
+            tmp_root = Path(tmp)
+            current_dir = tmp_root / "current"
+            files = module.write_current_values(root, current_dir, root / "analysis" / "paper_inputs")
+            module.compare_expected_dir(root / "analysis" / "release_current_values", current_dir, files)
+            mismatch_count, notes = module.compare_paper_to_release(root, root / "analysis" / "paper_inputs", tmp_root / "paper_compare")
+            if mismatch_count != 92:
+                errors.append(f"analysis compare-paper expected 92 differences, observed {mismatch_count}")
+            return {"current_status": "passed", "current_files": files, "paper_current_mismatch_count": mismatch_count, "paper_current_notes": notes}
+    except BaseException as exc:  # pragma: no cover - fail loudly in validation output
+        errors.append(f"analysis validation failed: {type(exc).__name__}: {exc}")
+        return {"current_status": "failed"}
+
 def validate_provenance(root: Path, errors: list[str]) -> dict[str, Any]:
     provenance_dir = root / "provenance"
     env_path = provenance_dir / "environment_manifest.csv"
@@ -876,7 +1066,7 @@ def validate_provenance(root: Path, errors: list[str]) -> dict[str, Any]:
     }
 
 
-def validate_release(root: Path) -> tuple[dict[str, Any], list[str]]:
+def validate_release(root: Path, run_exact_inputs: bool = True) -> tuple[dict[str, Any], list[str]]:
     errors: list[str] = []
     validate_shape(root, errors)
     files = iter_release_files(root)
@@ -885,6 +1075,12 @@ def validate_release(root: Path) -> tuple[dict[str, Any], list[str]]:
     validate_credentials(files, root, errors)
     validate_sha256sums(files, root, errors)
     manifest = validate_manifest(root, errors)
+    validate_diagnostic_integrations(root, errors)
+    analysis_summary = validate_analysis_outputs(root, errors)
+    if run_exact_inputs:
+        exact_input_summary = validate_exact_inputs(root, errors)
+    else:
+        exact_input_summary = {"status": "skipped", "reason": "--skip-exact-inputs"}
     validate_leaderboards(root, errors)
     significance_summary = validate_significance_categories(root, errors)
     provenance_summary = validate_provenance(root, errors)
@@ -897,6 +1093,8 @@ def validate_release(root: Path) -> tuple[dict[str, Any], list[str]]:
         "files_scanned": len(files),
         "parse_counts": parse_counts,
         "manifest_groups": [group["directory"] for group in manifest.get("artifact_groups", [])],
+        "exact_input_summary": exact_input_summary,
+        "analysis_summary": analysis_summary,
         "significance_category_summary": significance_summary,
         "provenance_summary": provenance_summary,
         "recompute_results": recompute_results,
@@ -909,9 +1107,14 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--pretty", action="store_true", help="Pretty-print JSON output.")
+    parser.add_argument(
+        "--skip-exact-inputs",
+        action="store_true",
+        help="Skip Torch/NumPy validation of exact CALVIN/LIBERO/SimplerEnv input artifacts.",
+    )
     args = parser.parse_args()
 
-    payload, errors = validate_release(args.root)
+    payload, errors = validate_release(args.root, run_exact_inputs=not args.skip_exact_inputs)
     output = {
         "status": "passed" if not errors else "failed",
         "errors": errors,

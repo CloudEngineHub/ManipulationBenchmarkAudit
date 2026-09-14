@@ -1,0 +1,6 @@
+benchmark,protocol,negative,not_significant,possibly_significant,certainly_significant,total,release_no_improvement,release_provably_not_significant,release_indeterminate,release_provably_significant
+LIBERO,Spatial + Object + Goal,363,112,170,144,789,363,112,170,144
+CALVIN,ABC->D,24,0,36,47,107,24,0,36,47
+SimplerEnv,WidowX-Bridge,17,16,62,27,122,17,16,62,27
+RoboCasa,RSS24 protocol,4,0,10,16,30,4,0,10,16
+RoboTwin 2.0,50 clean + 500 randomized demos,2,0,3,14,19,2,0,3,14

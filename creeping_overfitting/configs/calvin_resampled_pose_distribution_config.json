@@ -3,8 +3,8 @@
     "name": "resampled_pose",
     "perturbation": "override only continuous pose/orientation fields for blocks whose symbolic initial state is table",
     "protocol": "calvin_official_d_table_resets_v1",
-    "reset_bank": "<EXCLUDED_BINARY_RESET_BANK_NPZ>",
-    "reset_bank_exclusion": "The CALVIN resampled-pose reset bank is a binary NumPy archive rather than a text-auditable artifact, so it is omitted from the public release package to avoid hidden provenance leakage.",
+    "reset_bank": "results/calvin/reset_banks/abc_d_official_d_table_resets_1000seq_seed0.npz",
+    "reset_bank_release_note": "This small exact-input NumPy archive is included so Protocol 1 can be inspected without regenerating table-pose resets.",
     "reset_seed": 0,
     "scene_d_table_high_xyz": [
       0.35,

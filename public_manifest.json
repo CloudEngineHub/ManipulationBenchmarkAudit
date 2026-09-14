@@ -1,15 +1,27 @@
 {
   "release_name": "ManipulationBenchmarkAudit minimal public release",
-  "release_date": "2026-06-05",
+  "release_date": "2026-09-14",
   "package_policy": {
-    "included_file_types": ["csv", "json", "yaml", "md", "py"],
+    "included_file_types": [
+      "csv",
+      "json",
+      "yaml",
+      "md",
+      "py",
+      "txt",
+      "the exact SimplerEnv config SHA256 sidecar creeping_overfitting/configs/simplerenv_protocol_abcde_stack_v1.json.sha256",
+      "LIBERO .pruned_init files under the two released init-state trees",
+      "the exact CALVIN reset bank creeping_overfitting/results/calvin/reset_banks/abc_d_official_d_table_resets_1000seq_seed0.npz",
+      "custom SimplerEnv collision.obj and textured.dae assets under creeping_overfitting/artifacts/simplerenv/protocol_abcde/assets/custom/models/"
+    ],
     "excluded_artifacts": [
-      "model weights",
-      "datasets",
+      "model weights in Git",
+      "large datasets in Git",
       "rollout videos",
       "full rollout directories",
       "full observations",
       "per-step action traces",
+      "large reset-state banks not explicitly included as lightweight evaluation-condition artifacts",
       "simulator caches",
       "conda environments",
       "containers",
@@ -23,7 +35,31 @@
       "browser state"
     ],
     "private_provenance_policy": "Private paths, hostnames, job IDs, usernames, and W&B links are acceptable only if credential-clean; this package minimizes them.",
-    "checkpoint_identity_policy": "Binary model weights remain excluded. Public-safe checkpoint identity metadata, including model ids, revisions, local filenames, file sizes, and SHA256 hashes when available, is included under provenance/."
+    "checkpoint_identity_policy": "Binary model weights remain excluded from Git. Public-safe checkpoint identity metadata, including model ids, revisions, local filenames, file sizes, and SHA256 hashes when available, is included under provenance/.",
+    "external_payload_policy": "Selected large datasets and checkpoints stay outside Git in the Google Drive payload folder. Small result tables and source/config files stay in Git. The evaluation_inputs archive is a convenience mirror of committed exact-input configs/manifests/assets for Drive-based downloads, and checkpoint archives include basic metadata next to selected weights.",
+    "external_payload_folder": {
+      "status": "public_link_viewer",
+      "url": "https://drive.google.com/drive/folders/1ZYpEvdD1cf6JSLQiSu7hK0xahSNRvS9F",
+      "children": {
+        "datasets": "https://drive.google.com/drive/folders/1HGLUAxL4STXZ10091RFoha8ZrAn2WVQN",
+        "checkpoints": "https://drive.google.com/drive/folders/1S6M3l1FfFwUYHm5tsFXBs9p_K0BJsdqj",
+        "evaluation_inputs": "https://drive.google.com/drive/folders/1kUz0lVw-bgljb-oKRW8sQVCA83fajSqs"
+      },
+      "notes": "The folder allows anyone with the link to view and download its contents. Small result tables and source/config files stay in Git; evaluation_inputs mirrors committed exact-input assets for convenience."
+    },
+    "runnable_scope": {
+      "cpu_claim_recompute": "scripts/recompute_claims.py recomputes the public numeric claims from committed lightweight artifacts. analysis/README.md gives the full paper-input, release-current, and paper/current comparison commands with required output directories.",
+      "own_policy_training": "data_source_dependency/README.md and shortcut_solvability/README.md document first-party trainer/evaluator setup after installing diagnostic dependencies and obtaining named data/checkpoints. Current smoke coverage is recorded in validation_status.",
+      "third_party_policy_evaluation": "Committed configs, public-safe adapters/patches, exact small custom assets, reset/init-state artifacts, and external payload references identify the evaluated setup; full third-party checkpoints and datasets are not stored in Git."
+    },
+    "validation_status": {
+      "claim_recompute": "scripts/recompute_claims.py passes on the integrated CSV/JSON/YAML artifacts.",
+      "creeping_exact_inputs": "creeping_overfitting/code/validate_exact_inputs.py validates CALVIN manifests/reset bank, LIBERO selected rows, SimplerEnv config/assets, and Torch-loaded LIBERO .pruned_init contents. It requires NumPy and CPU PyTorch.",
+      "data_source_dependency": "Archive extraction commands were tested. A real-DINO CPU optimizer/save/load smoke on a real stack NPZ passed, one real stack saved-demo replay passed, and one actual stack step6500 checkpoint eval episode passed. This is not a full 96-episode replay/eval reproduction.",
+      "shortcut_solvability": "CPU optimizer/save/load/inference smokes passed. Strict loading passed for all seven actual packaged shortcut checkpoints. Original-vs-release _encode and full forward are exactly equal for one actual LIBERO and one actual CALVIN checkpoint, and seeded augmentation outputs are exactly equal.",
+      "checksum_manifest": "SHA256SUMS is refreshed for this final local release tree.",
+      "analysis": "analysis/run_analysis.py current --expected-dir passes. paper-inputs regeneration uses committed inputs. compare-paper intentionally exits 1 for 92 labeled frozen-paper/current significance classification differences."
+    }
   },
   "source_candidates_used": [
     {
@@ -79,39 +115,55 @@
       "directory": "shortcut_solvability",
       "owner": "benchmark audit shortcut-solvability diagnostic",
       "public_status": "included",
-      "claim_ids": ["shortcut_libero", "shortcut_calvin"],
+      "claim_ids": [
+        "shortcut_libero",
+        "shortcut_calvin"
+      ],
       "source": "/home/ripl/workspace/corl_2026_supp/shortcut_solvability",
-      "notes": "Includes compact result summaries, configs, and per-trial/per-sequence CSVs. Excludes training/evaluation code, checkpoints, datasets, and logs."
+      "notes": "Includes compact result summaries, configs, per-trial/per-sequence CSVs, and first-party LIBERO/CALVIN DINOv2/task-id trainer/evaluator code. Checkpoints, datasets, and logs remain excluded from Git and are referenced through Drive payloads/upstream benchmark locations. CPU optimizer/save/load/inference smokes passed; strict loading passed for all seven actual packaged shortcut checkpoints; original-vs-release _encode and full-forward equality passed for one actual LIBERO and one actual CALVIN checkpoint; seeded augmentation equality passed."
     },
     {
       "directory": "statistical_significance",
       "owner": "benchmark audit statistical-significance diagnostic",
       "public_status": "included_public_recomputed",
-      "claim_ids": ["libero_goal_pairwise_d"],
+      "claim_ids": [
+        "libero_goal_pairwise_d"
+      ],
       "source": "Internal Eval_Policies_CoRL LIBERO Goal 5x5k package recorded as results/libero/sam_exports/libero_goal_5x5k_for_sam_20260515T052653Z at commit a415f11",
-      "notes": "Includes policy_success_summary.csv, pairwise_disagreement.csv, five per-policy episodes_combined.csv files, five policy_summary.json files, shared config/init-state provenance, Sam's aggregate cutoff reference code copied from /home/ripl/workspace/corl_2026_supp/statistical_significance/significance_cutoffs.py, and generated aggregate-data category CSVs derived from the copied Sam exports under leaderboards/stat_significance_sam_export_20260522T233929/. scripts/recompute_claims.py verifies shared instance IDs and recomputes every pairwise D value plus mean and median D; scripts/validate_release.py validates category partition/count consistency."
+      "notes": "Includes policy_success_summary.csv, pairwise_disagreement.csv, five per-policy episodes_combined.csv files, five policy_summary.json files, shared config/provenance, the exact shared init_state_goal_5000 tree, Sam's aggregate cutoff reference code copied from /home/ripl/workspace/corl_2026_supp/statistical_significance/significance_cutoffs.py, and generated aggregate-data category CSVs derived from the copied Sam exports under leaderboards/stat_significance_sam_export_20260522T233929/. scripts/recompute_claims.py verifies shared instance IDs and recomputes every pairwise D value plus mean and median D; scripts/validate_release.py validates category partition/count consistency."
     },
     {
       "directory": "creeping_overfitting",
       "owner": "benchmark audit creeping-overfitting diagnostic",
       "public_status": "included_public_recomputed",
-      "claim_ids": ["simplerenv_fixed_grid", "simplerenv_protocol_abcde", "calvin_protocol1", "calvin_fresh_sequence", "libero_layer2"],
+      "claim_ids": [
+        "simplerenv_fixed_grid",
+        "simplerenv_protocol_abcde",
+        "calvin_protocol1",
+        "calvin_fresh_sequence",
+        "libero_layer2"
+      ],
       "source": "/home/ripl/workspace/corl_2026_supp/creeping_overfitting",
-      "notes": "Includes SimplerEnv rows/summaries, CALVIN rows/summaries, and LIBERO summary CSVs. Excludes LIBERO per-episode rollout rows, CALVIN full manifests/reset banks, raw logs, videos, checkpoints, datasets, caches, and environments. CALVIN fresh artifact provenance is verified at Eval_Policies_CoRL commit eba7c0037294557427a7a854c91be56d3f2838ec."
+      "notes": "Includes SimplerEnv rows/summaries, CALVIN rows/summaries, LIBERO summary/per-episode selected CSVs, the exact CALVIN reset bank, the exact LIBERO init-state trees, the SimplerEnv Protocol A-E config and SHA256 sidecar, accepted custom collision.obj/textured.dae block assets, and support validation code. Excludes full rollout directories, raw logs, videos, checkpoints, datasets, caches, environments, and large reset banks from Git. CALVIN fresh artifact provenance is verified at Eval_Policies_CoRL commit eba7c0037294557427a7a854c91be56d3f2838ec."
     },
     {
       "directory": "data_source_dependency",
       "owner": "benchmark audit data-source-dependency diagnostic",
       "public_status": "included",
-      "claim_ids": ["widowx_scripted_dsd_91_of_96"],
+      "claim_ids": [
+        "widowx_scripted_dsd_91_of_96"
+      ],
       "source": "/home/ripl/workspace/corl_2026_supp/data_source_dependency",
-      "notes": "Includes sanitized config, per-task/overall summaries, and one row per official grid episode. Excludes datasets, checkpoints, videos, and full training/eval directories."
+      "notes": "Includes sanitized configs, per-task/overall summaries, one row per official grid episode, and first-party scripted collection, saved-action replay, dataset validation, DINOv2-S+MLP training, and official eval code. Large datasets and checkpoints are referenced through the external payload folders. Archive extraction commands, real-DINO CPU optimizer/save/load on one real stack NPZ, one real stack saved-demo replay, and one actual stack step6500 checkpoint eval episode were tested; this is not a full 96-episode replay/eval reproduction."
     },
     {
       "directory": "leaderboards",
       "owner": "public leaderboard CSV snapshots",
       "public_status": "included",
-      "claim_ids": ["leaderboard_csv_snapshots", "statistical_significance_sam_exports"],
+      "claim_ids": [
+        "leaderboard_csv_snapshots",
+        "statistical_significance_sam_exports"
+      ],
       "source": "/home/ripl/workspace/leaderboards at commit 725613ff4e10f2725de3ac4ebcdbff28fc39586b",
       "notes": "Includes only the selected primary and supplementary leaderboard tracker CSVs plus the five Sam official-protocol previous-SOTA exports used to generate statistical_significance/significance_categories/. Excludes raw audit folders, caches, zips, scripts, downloaded papers, weight files, and non-CSV artifacts from the source repository."
     },
@@ -119,9 +171,23 @@
       "directory": "provenance",
       "owner": "public release provenance",
       "public_status": "included_best_effort",
-      "claim_ids": ["release_environment_provenance", "release_checkpoint_identity"],
+      "claim_ids": [
+        "release_environment_provenance",
+        "release_checkpoint_identity"
+      ],
       "source": "Compiled from released public artifacts plus local first-hand source/scratch metadata named in source_candidates_used and source_candidates_inspected_not_copied_directly.",
-      "notes": "Includes package/environment and checkpoint identity manifests. Unrecoverable exact package versions, checkpoint revisions, file sizes, and SHA256 hashes are explicitly marked unknown or best_effort. Binary checkpoint payloads remain excluded."
+      "notes": "Includes package/environment and checkpoint identity manifests. Unrecoverable exact package versions, checkpoint revisions, file sizes, and SHA256 hashes are explicitly marked unknown or best_effort. Binary checkpoint payloads remain excluded from Git."
+    },
+    {
+      "directory": "analysis",
+      "owner": "benchmark audit release analysis regeneration",
+      "public_status": "included_public_recomputed",
+      "claim_ids": [
+        "analysis_frozen_paper_artifacts",
+        "analysis_release_current_values"
+      ],
+      "source": "Release integration from committed public result files and frozen paper CSV inputs under analysis/paper_inputs/.",
+      "notes": "Includes CPU-only analysis regeneration code, eight frozen paper CSV inputs, committed release-current CSV outputs, and commands for exact paper-input regeneration, current-output regeneration, and labeled paper-versus-current comparison. The comparison intentionally reports 92 significance-classification differences."
     }
   ],
   "validation": {
@@ -136,10 +202,15 @@
       "LIBERO Layer 2 policy-level summary from released summary CSVs",
       "shortcut-solvability result summaries from per-trial/per-sequence rows",
       "statistical-significance category CSV partition and source-row count consistency",
-      "provenance manifest schema and explicit unknown/best_effort statuses"
+      "provenance manifest schema and explicit unknown/best_effort statuses",
+      "exact-input validation with NumPy and CPU PyTorch",
+      "analysis release-current CSV regeneration",
+      "analysis frozen paper artifact regeneration from committed paper_inputs",
+      "paper-versus-current significance comparison labels 92 differences"
     ],
     "expected_intentional_exclusions": [
-      "LIBERO Layer 2 per-episode rollout rows; the released policy-level summary claim is checked from released summary CSVs"
+      "LIBERO Layer 2 full rollout directories; the released selected per-episode rows and policy-level summary claim are checked from committed CSVs",
+      "Large DSD and shortcut training datasets/checkpoints from Git; runnable code points to Drive payload or upstream benchmark locations"
     ]
   }
 }

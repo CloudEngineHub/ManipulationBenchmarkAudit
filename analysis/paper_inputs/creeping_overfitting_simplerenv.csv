@@ -1,0 +1,17 @@
+policy,policy_label,plot_label,condition,condition_label,successes,total,source_summary_sha256
+cogact,CogACT-Base,CogACT,original_stack,Original stack,60,288,faa6846a7013e527d69a336ffa22c5ff2ef73a799957de0da794a45f921d2625
+cogact,CogACT-Base,CogACT,language_swap,Reverse language,28,288,a1b8bd1cb1350644f49a564957b67eb9e3b6bcb3c019710d63c69192dfe97e13
+cogact,CogACT-Base,CogACT,stacked_support,Stacked support blocks,64,288,a1b8bd1cb1350644f49a564957b67eb9e3b6bcb3c019710d63c69192dfe97e13
+cogact,CogACT-Base,CogACT,pose_arm_randomized,Random pose + arm,31,288,a1b8bd1cb1350644f49a564957b67eb9e3b6bcb3c019710d63c69192dfe97e13
+internvla_m1,InternVLA-M1,InternVLA,original_stack,Original stack,73,288,faa6846a7013e527d69a336ffa22c5ff2ef73a799957de0da794a45f921d2625
+internvla_m1,InternVLA-M1,InternVLA,language_swap,Reverse language,46,288,a1b8bd1cb1350644f49a564957b67eb9e3b6bcb3c019710d63c69192dfe97e13
+internvla_m1,InternVLA-M1,InternVLA,stacked_support,Stacked support blocks,60,288,a1b8bd1cb1350644f49a564957b67eb9e3b6bcb3c019710d63c69192dfe97e13
+internvla_m1,InternVLA-M1,InternVLA,pose_arm_randomized,Random pose + arm,46,288,a1b8bd1cb1350644f49a564957b67eb9e3b6bcb3c019710d63c69192dfe97e13
+xvla,X-VLA-WidowX,X-VLA,original_stack,Original stack,172,288,faa6846a7013e527d69a336ffa22c5ff2ef73a799957de0da794a45f921d2625
+xvla,X-VLA-WidowX,X-VLA,language_swap,Reverse language,153,288,a1b8bd1cb1350644f49a564957b67eb9e3b6bcb3c019710d63c69192dfe97e13
+xvla,X-VLA-WidowX,X-VLA,stacked_support,Stacked support blocks,90,288,a1b8bd1cb1350644f49a564957b67eb9e3b6bcb3c019710d63c69192dfe97e13
+xvla,X-VLA-WidowX,X-VLA,pose_arm_randomized,Random pose + arm,160,288,a1b8bd1cb1350644f49a564957b67eb9e3b6bcb3c019710d63c69192dfe97e13
+dexbotic,Dexbotic / DB-MemVLA,DB-MemVLA,original_stack,Original stack,129,288,faa6846a7013e527d69a336ffa22c5ff2ef73a799957de0da794a45f921d2625
+dexbotic,Dexbotic / DB-MemVLA,DB-MemVLA,language_swap,Reverse language,137,288,a1b8bd1cb1350644f49a564957b67eb9e3b6bcb3c019710d63c69192dfe97e13
+dexbotic,Dexbotic / DB-MemVLA,DB-MemVLA,stacked_support,Stacked support blocks,79,288,a1b8bd1cb1350644f49a564957b67eb9e3b6bcb3c019710d63c69192dfe97e13
+dexbotic,Dexbotic / DB-MemVLA,DB-MemVLA,pose_arm_randomized,Random pose + arm,112,288,a1b8bd1cb1350644f49a564957b67eb9e3b6bcb3c019710d63c69192dfe97e13

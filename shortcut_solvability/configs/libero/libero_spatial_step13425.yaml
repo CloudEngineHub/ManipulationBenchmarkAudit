@@ -25,6 +25,10 @@ lr: 0.0003
 backbone_lr: 3.0e-05
 train_visual_encoder: true
 vision_backbone: dino
+dino_model: dinov2_vitb14
+dino_feature_mode: cls
+pretrained_visual: true
+image_norm: imagenet
 use_proprio: true
 replan_steps: 15
 chunk_size: 15
@@ -37,7 +41,7 @@ save_eval_step_logs: false
 save_eval_videos: false
 run_name: libero_spatial_step13425
 run_prefix: shortcut_solvability
-checkpoint_dir: <CHECKPOINT_ROOT>/libero_spatial_step13425/checkpoints
+checkpoint_dir: <CHECKPOINT_ROOT>/shortcut_libero/libero_spatial
 eval_video_dir: <OUTPUT_ROOT>/libero_spatial_step13425/eval
 max_runtime_hours: 1000
 eval_num_workers: 2

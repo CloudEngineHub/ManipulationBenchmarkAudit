@@ -6,7 +6,7 @@ This directory contains the public-recomputed LIBERO Goal five-policy shared-ins
 
 ## Current Public Status
 
-1. The package under `libero_goal_5x5k/` includes five per-policy `episodes_combined.csv` files, one `policy_summary.json` per policy, `policy_success_summary.csv`, `pairwise_disagreement.csv`, and shared init-state/config provenance.
+1. The package under `libero_goal_5x5k/` includes five per-policy `episodes_combined.csv` files, one `policy_summary.json` per policy, `policy_success_summary.csv`, `pairwise_disagreement.csv`, shared `libero_config.yaml`, the provenance summary `init_state_goal_5000_MANIFEST.json`, and the exact shared init-state tree `shared/init_state_goal_5000/`.
 2. The paper-facing LIBERO Goal calibration value is mean pairwise `D = 0.03528` and median `0.0354` across five `5k` shared-instance rollouts.
 3. `libero_goal_pairwise_status.json` records that the claim is public-recomputed from release files and keeps the internal source pointer for provenance.
 4. `code/significance_cutoffs.py` is Sam's reference implementation for aggregate-data necessary/sufficient cutoff calculations, copied from the supplementary bundle at commit `d81bb7bbd18cb420c2c712668a8ee99f4c9c6cd7`.
