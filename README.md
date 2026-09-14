@@ -11,7 +11,7 @@
 
 - **LIBERO:** A **0.09B** probe nears top scores without language encoding or robotics pretraining.
 - **Significance:** Only **19.8% / 19.7%** of LIBERO / SimplerEnv gains are provably significant.
-- **CALVIN:** Resampling block poses within the training range drops X-VLA from **4.17 to 3.14** tasks completed out of five.
+- **CALVIN:** Resampling block poses within the training range lowers performance for **every tested policy**.
 - **SimplerEnv:** **22M** policies trained near the test reach **94.8%**, versus **95.8%** for **0.9B** X-VLA.
 - **Most-reported benchmarks fail more diagnostics:** LIBERO, CALVIN, and SimplerEnv fare worse than RoboCasa and RoboTwin 2.0.
 
