@@ -17,10 +17,10 @@
 
 ## Four diagnostics
 
-- **Shortcut solvability:** High scores without the claimed capabilities.
-- **Statistical significance:** Whether gains exceed evaluation noise.
-- **Creeping overfitting:** Fitting narrow test conditions or fixed test samples.
-- **Data-source dependence:** Generalization versus training close to the test.
+- **Shortcut solvability:** Can a policy reach a high score without the capabilities that score is taken to demonstrate?
+- **Statistical significance:** Does the reported evidence show that an improvement exceeds what evaluation noise could explain?
+- **Creeping overfitting:** Have policies become too tuned to a benchmark's narrow test conditions or its particular test examples?
+- **Data-source dependence:** Does a high score reflect generalization from different training conditions, or training data collected close to the test conditions?
 
 ## What's included
 
