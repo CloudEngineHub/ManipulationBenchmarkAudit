@@ -5,6 +5,8 @@
 
 [Paper](https://arxiv.org/abs/2606.04233) · [Project website](https://ripl.github.io/manipulation_benchmark_audit/) · [Datasets and checkpoints](https://drive.google.com/drive/folders/1ZYpEvdD1cf6JSLQiSu7hK0xahSNRvS9F)
 
+**TL;DR:** We audit five robot manipulation benchmarks and show why high scores alone may not establish general manipulation capability.
+
 ## About the paper
 
 Robot manipulation benchmarks test how well a robot control model, or policy, completes tasks. A high score is often treated as evidence of general manipulation capability. We test whether that conclusion is justified using four diagnostics on **LIBERO, CALVIN, SimplerEnv, RoboCasa, and RoboTwin 2.0**.
@@ -17,7 +19,7 @@ These results show why a high score alone may not establish general manipulation
 
 1. **Shortcut solvability:** Can a policy reach a high score without the capabilities that score is taken to demonstrate?
 2. **Statistical significance:** Does the reported evidence show that an improvement exceeds what evaluation noise could explain?
-3. **Creeping overfitting:** Have policies become too tuned to a benchmark's narrow test conditions or its particular test examples? We check both by changing conditions within the training range and drawing fresh test examples.
+3. **Creeping overfitting:** Have policies become too tuned to a benchmark's narrow test conditions or its particular test examples?
 4. **Data-source dependence:** Does a high score reflect generalization from different training conditions, or training data collected close to the test conditions?
 
 ## What's included
