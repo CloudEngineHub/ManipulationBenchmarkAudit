@@ -7,13 +7,11 @@
 
 **TL;DR:** High scores on commonly used benchmarks (LIBERO, SimplerEnv) are not proof of broader manipulation capability.
 
-## Abstract
+## Findings
 
-1. A benchmark score measures success under one fixed evaluation setup, yet is routinely treated as evidence of broader manipulation capability. We audit **LIBERO, CALVIN, SimplerEnv, RoboCasa, and RoboTwin 2.0** with four diagnostics.
-2. **LIBERO:** A **0.09B** probe with no language encoder scores at or near the best reported results. Most reported gains are not provably statistically significant.
-3. **CALVIN:** Randomizing block positions and orientations within the training range lowers performance for every tested policy.
-4. **Across benchmarks:** LIBERO and CALVIN fail multiple diagnostics. RoboCasa and RoboTwin 2.0 fail fewer, despite appearing far less often in recent progress claims.
-5. We release the diagnostics and reference implementations for authors and reviewers to use before treating a benchmark score as evidence of progress.
+1. **LIBERO:** A **0.09B** probe with no language encoder scores at or near the best reported results. Most reported gains are not provably statistically significant.
+2. **CALVIN:** Randomizing block positions and orientations within the training range lowers performance for every tested policy.
+3. **Across benchmarks:** LIBERO and CALVIN fail multiple diagnostics. RoboCasa and RoboTwin 2.0 fail fewer, despite appearing far less often in recent progress claims.
 
 ## The four diagnostics
 
