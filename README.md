@@ -5,15 +5,15 @@
 
 [Paper](https://arxiv.org/abs/2606.04233) · [Project website](https://ripl.github.io/manipulation_benchmark_audit/) · [Datasets and checkpoints](https://drive.google.com/drive/folders/1ZYpEvdD1cf6JSLQiSu7hK0xahSNRvS9F)
 
-**TL;DR:** We audit five robot manipulation benchmarks and show why high scores alone may not establish general manipulation capability.
+**TL;DR:** High scores on commonly used benchmarks (LIBERO, SimplerEnv) are not proof of broader manipulation capability.
 
-## About the paper
+## Abstract
 
-Robot manipulation benchmarks test how well a robot control model, or policy, completes tasks. A high score is often treated as evidence of general manipulation capability. We test whether that conclusion is justified using four diagnostics on **LIBERO, CALVIN, SimplerEnv, RoboCasa, and RoboTwin 2.0**.
+A robot manipulation benchmark score measures success under one fixed evaluation setup, yet is routinely treated as evidence of broader manipulation capability. We identify four failure modes that undermine this interpretation: shortcut solvability, lack of statistical significance, creeping overfitting, and data-source dependence.
 
-On LIBERO, a small model approaches the best reported scores without a language encoder or large-scale robotics pretraining. Most reported improvements cannot be shown to be statistically significant. On CALVIN, changing block positions and orientations within the training range lowers performance for every tested policy.
+We audit **LIBERO, CALVIN, SimplerEnv, RoboCasa, and RoboTwin 2.0**, using one diagnostic per failure mode. LIBERO and CALVIN fail multiple diagnostics. RoboCasa and RoboTwin 2.0 fail fewer, despite appearing far less often in recent progress claims. On LIBERO, a 90-million-parameter model with no language encoder scores at or near the best reported results, and most reported gains are not provably statistically significant. On CALVIN, randomizing block positions and orientations within the training range lowers performance for every tested policy.
 
-These results show why a high score alone may not establish general manipulation capability. They do not show that high-scoring policies lack that capability.
+We release the diagnostics and reference implementations for authors and reviewers to use before treating a benchmark score as evidence of progress.
 
 ## The four diagnostics
 
