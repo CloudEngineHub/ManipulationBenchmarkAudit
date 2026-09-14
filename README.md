@@ -1,85 +1,43 @@
 # What Are We Actually Benchmarking in Robot Manipulation?
 
-Public release package for the paper **"What Are We Actually Benchmarking in Robot Manipulation?"**
+**Accepted at CoRL 2026 and the IROS 2026 RGMCW workshop.**
 
-Project website: <https://ripl.github.io/manipulation_benchmark_audit/>
+[Paper](https://arxiv.org/abs/2606.04233) · [Project website](https://ripl.github.io/manipulation_benchmark_audit/) · [Datasets and checkpoints](https://drive.google.com/drive/folders/1ZYpEvdD1cf6JSLQiSu7hK0xahSNRvS9F)
 
-## Purpose
+## About the paper
 
-This repository contains lightweight public artifacts for the manipulation benchmark audit diagnostics. It is a curated release layer: result files, claim mappings, small public-safe support code, reset/init-state artifacts where needed, and lightweight validation scripts, not a dump of internal training/evaluation workspaces.
+A high benchmark score is often treated as evidence of general manipulation capability. We examine whether that inference is justified through four diagnostics, applied to **LIBERO, CALVIN, SimplerEnv, RoboCasa, and RoboTwin 2.0**.
 
-Third-party notices for selected helper code, custom asset files, and DINOv2-derived downloaded checkpoint payloads are recorded in [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt).
+On LIBERO, a small probe approaches reported SOTA without a language encoder or large-scale robotics pretraining, and most reported gains cannot be established as statistically significant. On CALVIN, changing block poses within the training range lowers every tested policy's performance. These findings challenge what scores establish about capability; they do not establish that high-scoring policies lack capability.
 
-## Layout
+## The four diagnostics
 
-```text
-.
-├── shortcut_solvability/
-├── statistical_significance/
-├── creeping_overfitting/
-├── data_source_dependency/
-├── leaderboards/
-├── provenance/
-├── scripts/
-├── analysis/
-├── CLAIMS.md
-├── SHA256SUMS
-├── public_manifest.json
-├── LICENSE
-└── README.md
-```
+1. **Shortcut solvability:** Can a policy reach a comparable score while lacking the capabilities that score is taken to demonstrate?
+2. **Statistical significance:** Does the reported evaluation evidence establish that an improvement is statistically significant?
+3. **Creeping overfitting:** Have policies fitted the benchmark's narrow test distribution or its fixed test samples? The diagnostic distinguishes these two possibilities and keeps changes within the training distribution.
+4. **Data-source dependence:** Can training data close to the test produce a score that would otherwise be interpreted as generalization across a train–test gap? In this audit, this diagnostic applies to SimplerEnv.
 
-## Included Diagnostics
+## What's included
 
-1. `shortcut_solvability/`: LIBERO and CALVIN DINO+MLP/task-id shortcut-solvability summaries, configs, compact per-trial/per-sequence outcomes, and first-party training/evaluation code for the released shortcut policies.
-2. `statistical_significance/`: LIBERO Goal five-policy `5k` shared-instance outcome rows, policy summaries, pairwise-disagreement summary, aggregate leaderboard significance-category CSVs, cutoff reference code, and the exact shared LIBERO Goal init-state tree.
-3. `creeping_overfitting/`: SimplerEnv fixed-grid and Protocol A-E rows/summaries, CALVIN resampled-pose and fresh-sequence rows/summaries, LIBERO Layer 2 rows/summaries, exact CALVIN/LIBERO reset/init-state inputs, SimplerEnv Protocol A-E configs/assets, and support validation code.
-4. `data_source_dependency/`: scripted-demo WidowX data-source-dependency summaries, official `4 x 24` grid trial outcomes, and first-party scripted collection, replay, dataset-validation, training, and official-eval code.
-5. `leaderboards/`: copied public leaderboard CSV snapshots and the Sam official-protocol previous-SOTA exports used for the significance category tables.
-6. `provenance/`: best-effort package/environment provenance and checkpoint identity manifests, with unrecoverable exact fields marked unknown.
-7. `analysis/`: CPU regeneration path for selected frozen paper figures/tables and release-current analysis CSVs.
+| Diagnostic | Released materials |
+|---|---|
+| [Shortcut solvability](shortcut_solvability/README.md) | LIBERO/CALVIN shortcut-policy training and evaluation code, configs, and results. |
+| [Statistical significance](statistical_significance/README.md) | Leaderboard comparisons, shared-instance rollout outcomes, and significance analysis. |
+| [Creeping overfitting](creeping_overfitting/README.md) | Evaluation results, custom configs and assets, and exact reset and initial-state inputs. |
+| [Data-source dependence](data_source_dependency/README.md) | Scripted WidowX demonstration collection, training and evaluation code, and results. |
 
-## Reproduction Levels
+We also include [leaderboard snapshots](leaderboards/) and [CPU analysis scripts](analysis/README.md) for regenerating selected paper figures and tables. The [claim-to-artifact guide](CLAIMS.md) connects the reported results to the released evidence.
 
-1. CPU claim and analysis regeneration is included in this release. Run `python scripts/recompute_claims.py` to recompute public headline numbers from released CSV/JSON/YAML files. For the selected frozen paper CSV/SVG/TeX artifacts, release-current CSVs, and the intentional `92`-row paper/current significance comparison, use the commands in [`analysis/README.md`](analysis/README.md).
-2. Own-policy training code is included for `data_source_dependency/` and `shortcut_solvability/`. These commands require the diagnostic dependencies plus the named external datasets, checkpoints, benchmark packages, and DINOv2 caches. DSD has tested archive extraction commands, a real-DINO CPU optimizer/save/load smoke on a real stack NPZ, one real stack saved-demo replay, and one actual `step6500` stack checkpoint eval episode; this is not a full `96`-episode replay/eval reproduction. Shortcut has CPU optimizer/save/load/inference smokes, strict loading for all seven actual packaged checkpoints, exact original-vs-release `_encode` and full-forward equality for one actual LIBERO and one actual CALVIN checkpoint, and exact seeded augmentation equality. See [`data_source_dependency/README.md`](data_source_dependency/README.md) and [`shortcut_solvability/README.md`](shortcut_solvability/README.md) for runnable setup and archive extraction commands.
-3. Third-party policy evaluations are released as artifacts plus the custom changes needed to identify the evaluated setup: compact rows/summaries, configs, adapters or patches, small custom assets, and exact reset/init-state files where those define the benchmark condition. Full external checkpoints and large datasets remain outside Git, either in upstream model/data locations or in the single Google Drive payload folder named below.
+## Using the release
 
-## External Payloads
+To **explore the paper's results**, start with the diagnostic links above. To **regenerate figures and tables**, follow the [analysis guide](analysis/README.md).
 
-Large payloads use one public Google Drive folder instead of being committed to Git: <https://drive.google.com/drive/folders/1ZYpEvdD1cf6JSLQiSu7hK0xahSNRvS9F>. The child folders are:
+To **train or evaluate our simple policies**, follow the [LIBERO/CALVIN shortcut guide](shortcut_solvability/README.md) or the [scripted WidowX guide](data_source_dependency/README.md). Both describe the required benchmark software and data.
 
-1. `datasets/`: <https://drive.google.com/drive/folders/1HGLUAxL4STXZ10091RFoha8ZrAn2WVQN>
-2. `checkpoints/`: <https://drive.google.com/drive/folders/1S6M3l1FfFwUYHm5tsFXBs9p_K0BJsdqj>
-3. `evaluation_inputs/`: <https://drive.google.com/drive/folders/1kUz0lVw-bgljb-oKRW8sQVCA83fajSqs>
+The [Google Drive folder](https://drive.google.com/drive/folders/1ZYpEvdD1cf6JSLQiSu7hK0xahSNRvS9F) contains our scripted demonstration datasets and selected trained checkpoints, plus a convenience copy of the evaluation inputs. Download only the archives you need; code and compact result files are already in this repository.
 
-These links allow anyone with the link to view and download the artifacts. Small result tables and source/config files stay in Git. `evaluation_inputs.tar` is a convenience mirror of the committed exact-input configs/manifests/assets for Drive-based downloads, and checkpoint archives include basic metadata next to selected weights that are intentionally outside Git.
-
-## Validation
-
-The lightweight aggregate checks are:
-
-```bash
-python scripts/recompute_claims.py
-python scripts/validate_release.py --skip-exact-inputs
-sha256sum -c SHA256SUMS
-```
-
-The exact-input check also validates Torch-loaded LIBERO `.pruned_init` payload contents, so run it in a CPU environment with NumPy and PyTorch available:
-
-```bash
-python creeping_overfitting/code/validate_exact_inputs.py
-python scripts/validate_release.py
-```
-
-The selected paper/current analysis artifacts regenerate from committed files; use [`analysis/README.md`](analysis/README.md) for the required output directories, optional figure/table outputs, and the expected `compare-paper` status `1` with `92` labeled historical/current differences. [`creeping_overfitting/README.md`](creeping_overfitting/README.md), [`data_source_dependency/README.md`](data_source_dependency/README.md), and [`shortcut_solvability/README.md`](shortcut_solvability/README.md) describe diagnostic-specific runtime setup and limits.
-
-`CLAIMS.md` maps each public claim to the files used for recomputation. `public_manifest.json` records the release policy, source candidates, artifact groups, validation status, and intentional exclusions.
-
-## Exclusions
-
-The Git repository intentionally excludes model weights, large datasets, rollout videos, full rollout directories, full observations, per-step action traces, simulator caches, conda environments, containers, raw logs, third-party source checkouts, Git metadata, browser state, credential files, and credential material. Selected datasets/checkpoints live in the public Drive payload folder. Checkpoint identity metadata is included in Git without binary payloads. The included small reset/init-state artifacts and custom assets are the exact files named by the validator when they define a public evaluation condition. Private paths, hostnames, job IDs, and W&B links are not release blockers by policy if credential-clean, but this package keeps them minimal.
+For third-party policies, we provide evaluation artifacts and custom inputs; their official repositories supply the full software environments. Detailed reproduction scope, validation coverage, archive links, and exclusions are in [Reproduction and Release Details](REPRODUCIBILITY.md).
 
 ## Contact
 
-For questions, please either post an issue to this repository or email Tianchong Jiang at <tianchongj@ttic.edu>.
+Please [open an issue](https://github.com/ripl/ManipulationBenchmarkAudit/issues) or email [Tianchong Jiang](mailto:tianchongj@ttic.edu).
