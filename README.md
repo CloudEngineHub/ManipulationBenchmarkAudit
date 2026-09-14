@@ -7,25 +7,27 @@
 
 ## About the paper
 
-A high benchmark score is often treated as evidence of general manipulation capability. We examine whether that inference is justified through four diagnostics, applied to **LIBERO, CALVIN, SimplerEnv, RoboCasa, and RoboTwin 2.0**.
+Robot manipulation benchmarks test how well a robot control model, or policy, completes tasks. A high score is often treated as evidence of general manipulation capability. We test whether that conclusion is justified using four diagnostics on **LIBERO, CALVIN, SimplerEnv, RoboCasa, and RoboTwin 2.0**.
 
-On LIBERO, a small probe approaches reported SOTA without a language encoder or large-scale robotics pretraining, and most reported gains cannot be established as statistically significant. On CALVIN, changing block poses within the training range lowers every tested policy's performance. These findings challenge what scores establish about capability; they do not establish that high-scoring policies lack capability.
+On LIBERO, a small model approaches the best reported scores without a language encoder or large-scale robotics pretraining. Most reported improvements cannot be shown to be statistically significant. On CALVIN, changing block positions and orientations within the training range lowers performance for every tested policy.
+
+These results show why a high score alone may not establish general manipulation capability. They do not show that high-scoring policies lack that capability.
 
 ## The four diagnostics
 
-1. **Shortcut solvability:** Can a policy reach a comparable score while lacking the capabilities that score is taken to demonstrate?
-2. **Statistical significance:** Does the reported evaluation evidence establish that an improvement is statistically significant?
-3. **Creeping overfitting:** Have policies fitted the benchmark's narrow test distribution or its fixed test samples? The diagnostic distinguishes these two possibilities and keeps changes within the training distribution.
-4. **Data-source dependence:** Can training data close to the test produce a score that would otherwise be interpreted as generalization across a train–test gap? In this audit, this diagnostic applies to SimplerEnv.
+1. **Shortcut solvability:** Can a policy reach a high score without the capabilities that score is taken to demonstrate?
+2. **Statistical significance:** Does the reported evidence show that an improvement exceeds what evaluation noise could explain?
+3. **Creeping overfitting:** Have policies become too tuned to a benchmark's narrow test conditions or its particular test examples? We check both by changing conditions within the training range and drawing fresh test examples.
+4. **Data-source dependence:** Does a high score reflect generalization from different training conditions, or training data collected close to the test conditions?
 
 ## What's included
 
 | Diagnostic | Released materials |
 |---|---|
-| [Shortcut solvability](shortcut_solvability/README.md) | LIBERO/CALVIN shortcut-policy training and evaluation code, configs, and results. |
-| [Statistical significance](statistical_significance/README.md) | Leaderboard comparisons, shared-instance rollout outcomes, and significance analysis. |
-| [Creeping overfitting](creeping_overfitting/README.md) | Evaluation results, custom configs and assets, and exact reset and initial-state inputs. |
-| [Data-source dependence](data_source_dependency/README.md) | Scripted WidowX demonstration collection, training and evaluation code, and results. |
+| [Shortcut solvability](shortcut_solvability/README.md) | LIBERO/CALVIN shortcut-policy training and evaluation code, settings, and results. |
+| [Statistical significance](statistical_significance/README.md) | Leaderboard comparisons, outcomes for policies evaluated on the same test instances, and significance analysis. |
+| [Creeping overfitting](creeping_overfitting/README.md) | Evaluation results, custom settings and assets, and files specifying the exact starting states used for evaluation. |
+| [Data-source dependence](data_source_dependency/README.md) | Code for collecting scripted demonstrations with the simulated WidowX robot, training and evaluation code, and results. |
 
 We also include [leaderboard snapshots](leaderboards/) and [CPU analysis scripts](analysis/README.md) for regenerating selected paper figures and tables. The [claim-to-artifact guide](CLAIMS.md) connects the reported results to the released evidence.
 
@@ -35,9 +37,9 @@ To **explore the paper's results**, start with the diagnostic links above. To **
 
 To **train or evaluate our simple policies**, follow the [LIBERO/CALVIN shortcut guide](shortcut_solvability/README.md) or the [scripted WidowX guide](data_source_dependency/README.md). Both describe the required benchmark software and data.
 
-The [Google Drive folder](https://drive.google.com/drive/folders/1ZYpEvdD1cf6JSLQiSu7hK0xahSNRvS9F) contains our scripted demonstration datasets and selected trained checkpoints, plus a convenience copy of the evaluation inputs. Download only the archives you need; code and compact result files are already in this repository.
+The [Google Drive folder](https://drive.google.com/drive/folders/1ZYpEvdD1cf6JSLQiSu7hK0xahSNRvS9F) contains our scripted demonstration datasets, selected trained model weights, and a copy of the evaluation inputs. Code and compact result files are in this repository.
 
-For third-party policies, we provide evaluation artifacts and custom inputs; their official repositories supply the full software environments. Detailed reproduction scope, validation coverage, archive links, and exclusions are in [Reproduction and Release Details](REPRODUCIBILITY.md).
+For third-party policies, we provide evaluation results and custom inputs. Follow their official repositories to set up the software. See [Reproduction and Release Details](REPRODUCIBILITY.md) for download links, what can be reproduced, what we tested, and what is excluded.
 
 ## Contact
 
