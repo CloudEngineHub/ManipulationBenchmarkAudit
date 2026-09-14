@@ -9,9 +9,11 @@
 
 ## Findings
 
-1. **LIBERO:** A **0.09B** probe with no language encoder scores at or near the best reported results. Most reported gains are not provably statistically significant.
-2. **CALVIN:** Randomizing block positions and orientations within the training range lowers performance for every tested policy.
-3. **Across benchmarks:** LIBERO and CALVIN fail multiple diagnostics. RoboCasa and RoboTwin 2.0 fail fewer, despite appearing far less often in recent progress claims.
+1. **High scores without broader capability:** On LIBERO, a **0.09B** probe with no language encoder or large-scale robotics pretraining scores at or near the best reported results.
+2. **Most gains are not provably significant:** Only **19.8%** of LIBERO and **19.7%** of SimplerEnv claims of improvement over the previous best are provably statistically significant from the reported scores.
+3. **Performance drops within the training range:** On CALVIN, randomizing block positions and orientations lowers performance for every tested policy. X-VLA drops from **4.17 to 3.14** tasks completed out of five.
+4. **Training close to the test nearly matches a much larger model:** On SimplerEnv, separate **22M** policies trained on **120 scripted demonstrations per task**, collected near the test conditions, reach **94.8%** success—close to the **0.9B** X-VLA's reported **95.8%**—without robotics pretraining.
+5. **The most-reported benchmarks fail more diagnostics:** LIBERO, CALVIN, and SimplerEnv each fail several diagnostics; RoboCasa and RoboTwin 2.0 fare better despite appearing far less often in progress claims.
 
 ## The four diagnostics
 
