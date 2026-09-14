@@ -1,6 +1,7 @@
 # What Are We Actually Benchmarking in Robot Manipulation?
 
-**Accepted at CoRL 2026 and the IROS 2026 RGMCW workshop.**
+**CoRL 2026 (to appear)**<br>
+**IROS 2026 RGMCW workshop**
 
 [Paper](https://arxiv.org/abs/2606.04233) · [Project website](https://ripl.github.io/manipulation_benchmark_audit/) · [Datasets and checkpoints](https://drive.google.com/drive/folders/1ZYpEvdD1cf6JSLQiSu7hK0xahSNRvS9F)
 
