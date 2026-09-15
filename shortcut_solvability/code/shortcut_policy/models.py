@@ -82,7 +82,7 @@ if nn is not None:
             mild_crop_erasing_erasing_p: float = 0.25,
             mild_crop_erasing_erasing_scale_min: float = 0.01,
             mild_crop_erasing_erasing_scale_max: float = 0.05,
-            task_embedding_scale: float = 1.0,
+            task_embedding_scale: float | None = 1.0,
             dino_model: str = "dinov2_vitb14",
             dino_feature_mode: str = "cls",
             dino_hub_dir: str | None = None,
@@ -165,8 +165,9 @@ if nn is not None:
             self.task_embedding_name = task_embedding_name
             task_module = nn.Embedding(self.num_tasks, task_dim)
             setattr(self, task_embedding_name, task_module)
-            with torch.no_grad():
-                task_module.weight.copy_(F.normalize(task_module.weight, dim=-1) * float(task_embedding_scale))
+            if task_embedding_scale is not None:
+                with torch.no_grad():
+                    task_module.weight.copy_(F.normalize(task_module.weight, dim=-1) * float(task_embedding_scale))
             if self.use_addition:
                 if task_dim != input_dim:
                     raise ValueError("task addition requires task_dim == input_dim")
@@ -260,7 +261,7 @@ def build_policy_from_cfg(
         hidden_dim = 512
         head_depth = 2
         use_addition = False
-        task_embedding_scale = 1.0
+        task_embedding_scale = None  # Original LIBERO uses unnormalized random embeddings.
         task_embedding_name = "task_embedding"
         flip_images = bool(cfg_get(cfg, "flip_images", False))
         resize_antialias = False

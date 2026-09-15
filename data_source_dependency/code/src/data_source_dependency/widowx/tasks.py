@@ -4,6 +4,7 @@ from dataclasses import dataclass
 
 
 TASK_ORDER = ("stack", "carrot", "spoon", "eggplant")
+CONTROL_MODE = "arm_pd_ee_target_base_pose_gripper_pd_joint_pos"
 
 
 @dataclass(frozen=True)
@@ -40,6 +41,21 @@ TASKS: dict[str, WidowXTask] = {
         official_horizon=120,
     ),
 }
+
+
+def make_env(task_key: str):
+    """Use the paper's absolute base-frame pose controller for saved actions."""
+    import simpler_env
+
+    env = simpler_env.make(TASKS[task_key].env_task)
+    actual_mode = env.unwrapped.control_mode
+    if actual_mode != CONTROL_MODE:
+        env.close()
+        raise RuntimeError(
+            f"DSD actions require {CONTROL_MODE!r}, but SimplerEnv selected {actual_mode!r}. "
+            "Install the pinned X-VLA forks in data_source_dependency/README.md#environment."
+        )
+    return env
 
 
 def parse_tasks(tasks: str | list[str] | tuple[str, ...] | None) -> list[str]:

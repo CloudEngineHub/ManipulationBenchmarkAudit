@@ -39,7 +39,22 @@ export PYTHONPYCACHEPREFIX="$DSD_CACHE_ROOT/pycache"
 mkdir -p "$DSD_DATA_ROOT" "$DSD_OUTPUT_ROOT" "$DSD_CACHE_ROOT/hub"
 ```
 
-Install PyTorch/torchvision for the target CUDA stack, plus the Python packages in `code/requirements.txt`. The collector, saved-action replay, and official eval also require a working SimplerEnv WidowX installation with SAPIEN rendering. The DINOv2 backbone is loaded with `torch.hub.load(..., source="local")`; place a local `facebookresearch/dinov2` checkout at `$DSD_DINO_HUB_DIR`.
+Install PyTorch/torchvision for the target CUDA stack, plus the Python packages in `code/requirements.txt`. The DINOv2 backbone is loaded with `torch.hub.load(..., source="local")`; place a local `facebookresearch/dinov2` checkout at `$DSD_DINO_HUB_DIR`.
+
+Collection, saved-action replay, and evaluation require the X-VLA forks used by the original experiments: [255isWhite/SimplerEnv at `4233e3f`](https://github.com/255isWhite/SimplerEnv/tree/4233e3fcf006f0bd0e951c190db3b209dc3f3543) and [255isWhite/ManiSkill2_real2sim at `54ae2e0`](https://github.com/255isWhite/ManiSkill2_real2sim/tree/54ae2e0e9422807d060aa15ff7c04970d38d3cf8). Use a Python 3.10 environment with SAPIEN rendering configured. Install both forks into that environment:
+
+```bash
+export DSD_SIMPLER_ROOT="$DSD_WORK_ROOT/SimplerEnv"
+git clone https://github.com/255isWhite/SimplerEnv.git "$DSD_SIMPLER_ROOT"
+git -C "$DSD_SIMPLER_ROOT" checkout 4233e3fcf006f0bd0e951c190db3b209dc3f3543
+git -C "$DSD_SIMPLER_ROOT" config submodule.ManiSkill2_real2sim.url https://github.com/255isWhite/ManiSkill2_real2sim.git
+git -C "$DSD_SIMPLER_ROOT" submodule update --init --recursive
+python -m pip install -e "$DSD_SIMPLER_ROOT/ManiSkill2_real2sim" -e "$DSD_SIMPLER_ROOT"
+```
+
+The submodule URL override is necessary because the SimplerEnv fork still names the standard ManiSkill repository; its recorded submodule commit is `54ae2e0e9422807d060aa15ff7c04970d38d3cf8` from the X-VLA fork. Ensure `PYTHONPATH` does not point to another SimplerEnv or ManiSkill checkout.
+
+The saved `actions_env` contain absolute end-effector positions in the robot base frame, XYZ Euler angles, and a gripper command. They require `arm_pd_ee_target_base_pose_gripper_pd_joint_pos`. Standard SimplerEnv selects a relative-motion controller, which interprets these actions incorrectly. All three entry points check the selected controller and stop before rollout if it is incompatible.
 
 ## Downloaded Data Path
 

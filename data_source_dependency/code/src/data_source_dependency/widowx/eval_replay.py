@@ -10,7 +10,7 @@ from typing import Any
 
 import numpy as np
 
-from data_source_dependency.widowx.tasks import TASKS, parse_tasks
+from data_source_dependency.widowx.tasks import TASKS, make_env, parse_tasks
 
 
 def _scalar(data: np.lib.npyio.NpzFile, key: str) -> Any:
@@ -102,8 +102,6 @@ def rollout_replay(
     case_index: int,
     use_saved_reset_metadata: bool,
 ) -> dict[str, Any]:
-    import simpler_env
-
     task = TASKS[task_key]
     if episode_path is None:
         return {
@@ -122,7 +120,7 @@ def rollout_replay(
 
     env = None
     try:
-        env = simpler_env.make(task.env_task)
+        env = make_env(task_key)
         with np.load(episode_path, allow_pickle=True) as data:
             if use_saved_reset_metadata:
                 reset_options = _reset_options_from_saved_metadata(env, data)
