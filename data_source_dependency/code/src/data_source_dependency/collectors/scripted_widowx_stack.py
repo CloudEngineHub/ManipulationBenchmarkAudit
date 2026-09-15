@@ -17,7 +17,7 @@ from data_source_dependency.widowx.proprio import (
     initial_xvla_proprio,
     update_xvla_proprio_from_env_action,
 )
-from data_source_dependency.widowx.tasks import TASKS
+from data_source_dependency.widowx.tasks import TASKS, make_env
 
 
 DEFAULT_TASK_KEY = "stack"
@@ -587,8 +587,6 @@ def append_jsonl(path: Path, payload: dict[str, Any]) -> None:
 
 
 def collect(args: argparse.Namespace) -> None:
-    import simpler_env
-
     task_key = str(args.task_key)
     task = TASKS[task_key]
     grid_ids = _parse_episode_ids(args)
@@ -635,7 +633,7 @@ def collect(args: argparse.Namespace) -> None:
     attempt_index = 0
     start_time = time.time()
     rng = np.random.default_rng(int(args.perturb_seed))
-    env = simpler_env.make(task.env_task)
+    env = make_env(task_key)
     try:
         for grid_id in grid_ids:
             while successes_by_grid_id[grid_id] < target_per_grid:

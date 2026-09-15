@@ -17,7 +17,7 @@ from data_source_dependency.widowx.proprio import (
     update_xvla_proprio_from_env_action,
     xvla_first10_to_env_action,
 )
-from data_source_dependency.widowx.tasks import TASKS, parse_tasks
+from data_source_dependency.widowx.tasks import TASKS, make_env, parse_tasks
 
 
 def _step_from_name(path: Path) -> int:
@@ -87,13 +87,12 @@ def rollout_one(
     threshold_gripper: bool,
     clip_action: bool,
 ) -> dict[str, Any]:
-    import simpler_env
     from simpler_env.utils.env.observation_utils import get_image_from_maniskill2_obs_dict
 
     task = TASKS[task_key]
     env = None
     try:
-        env = simpler_env.make(task.env_task)
+        env = make_env(task_key)
         obs, _ = env.reset(options={"obj_init_options": {"episode_id": int(grid_episode_id)}})
         task_id = payload["task_vocab"].index(task_key)
         raw_proprio = initial_xvla_proprio(obs) if model.use_proprio else None
