@@ -275,7 +275,17 @@ REQUIRED_SHORTCUT_FILES = {
     "shortcut_solvability/configs/calvin/task_D_D_step40000.yaml",
     "shortcut_solvability/configs/calvin/task_ABC_D_step100000.yaml",
     "shortcut_solvability/configs/calvin/task_ABCD_D_step100000.yaml",
+    "shortcut_solvability/configs/calvin/task_ABCD_D_step150000.yaml",
+    "shortcut_solvability/configs/calvin/official_validation_merged_config.yaml",
+    "shortcut_solvability/configs/calvin/official_validation_config_source.json",
     "shortcut_solvability/results/calvin/official_1000_eval_sequences.json",
+    "shortcut_solvability/results/calvin/selected_vs_final.csv",
+    "shortcut_solvability/results/calvin/final_checkpoint/task_ABCD_D_step150000/summary.json",
+    "shortcut_solvability/results/calvin/final_checkpoint/task_ABCD_D_step150000/trials.csv",
+    "shortcut_solvability/results/calvin/final_checkpoint/task_ABCD_D_step150000/artifact_manifest.json",
+    "shortcut_solvability/results/calvin/final_checkpoint/task_ABCD_D_step150000/config.yaml",
+    "shortcut_solvability/results/calvin/final_checkpoint/task_ABCD_D_step150000/command.txt",
+    "shortcut_solvability/results/calvin/final_checkpoint/task_ABCD_D_step150000/provenance.json",
 }
 
 REQUIRED_ANALYSIS_FILES = {
@@ -1047,6 +1057,31 @@ def validate_provenance(root: Path, errors: list[str]) -> dict[str, Any]:
         else:
             if sha.lower() != "unknown" and not HEX64_RE.match(sha):
                 errors.append(f"{prefix}: sha256 must be unknown or lowercase 64-hex")
+
+    final_dir = root / "shortcut_solvability/results/calvin/final_checkpoint/task_ABCD_D_step150000"
+    final_manifest = json.loads((final_dir / "artifact_manifest.json").read_text())
+    final_summary = json.loads((final_dir / "summary.json").read_text())
+    config_source = json.loads((root / "shortcut_solvability/configs/calvin/official_validation_config_source.json").read_text())
+    if sha256_file(root / "shortcut_solvability/configs/calvin/official_validation_merged_config.yaml") != config_source["sha256"]:
+        errors.append("CALVIN official environment config differs from the recovered dataset member")
+    checkpoint = next(row for row in checkpoint_rows if row["record_id"] == "shortcut_calvin_abcd_step150000")
+    runtime = next(row for row in env_rows if row["record_id"] == "shortcut_calvin_dino_mlp_abcd_final")
+    expected = {
+        "step": 150000, "eval_steps": [150000], "num_sequences": 1000, "ep_len": 360,
+        "seed": 0, "protocol": "official_1000_sequences", "stepping_mode": "lazy_no_render",
+        "checkpoint_sha256": checkpoint["sha256"],
+        "config_sha256": sha256_file(final_dir / "config.yaml"),
+        "eval_sequences_sha256": sha256_file(root / "shortcut_solvability/results/calvin/official_1000_eval_sequences.json"),
+        "command": (final_dir / "command.txt").read_text().strip(),
+        "avg_seq_len": final_summary["avg_seq_len"], "chain_sr": final_summary["chain_sr"],
+        "torch_version": runtime["pytorch"], "torch_cuda": runtime["cuda"],
+    }
+    for key, value in expected.items():
+        if final_manifest[key] != value:
+            errors.append(f"CALVIN final checkpoint provenance mismatch: {key}")
+    for key in ["repo_commit", "submodule_status", "checkpoint_path", "cpu_model", "gpus", "python", "conda_prefix", "slurm_job_id"]:
+        if not final_manifest[key]:
+            errors.append(f"CALVIN final checkpoint provenance missing: {key}")
 
     missing_env_claims = sorted(required_claims - env_claims)
     if missing_env_claims:

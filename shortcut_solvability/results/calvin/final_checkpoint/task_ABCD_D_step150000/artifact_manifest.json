@@ -1,0 +1,55 @@
+{
+  "apptainer_name": "",
+  "artifact_schema": "calvin_official_eval_v1",
+  "avg_seq_len": 3.783,
+  "benchmark": "CALVIN",
+  "chain_sr": {
+    "1": 0.926,
+    "2": 0.828,
+    "3": 0.75,
+    "4": 0.678,
+    "5": 0.601
+  },
+  "checkpoint_path": "/share/data/ripl/tianchong/projects/Policy_Eval_Done_Right/outputs/apr24_ABCDD_start_offset_0_end_offset_0_seed_0/checkpoints/step150000.pt",
+  "checkpoint_sha256": "07e8055f342d52423f184eab941e2d56854278814629b98db443fcae03a85397",
+  "command": "/share/data/ripl/tianchong/conda/envs/calvin/bin/python -m simple_policy_calvin.eval /share/data/ripl/tianchong/projects/Policy_Eval_Done_Right/outputs/official_eval_apr24_ABCDD_step150000_20261007_retry1/eval_config.yaml",
+  "conda_default_env": "calvin",
+  "conda_prefix": "/share/data/ripl/tianchong/conda/envs/calvin",
+  "config_path": "/share/data/ripl/tianchong/projects/Policy_Eval_Done_Right/outputs/official_eval_apr24_ABCDD_step150000_20261007_retry1/eval_config.yaml",
+  "config_sha256": "88f6b7e888cc60364cf2dbec812d6a026b11f4fc087f497806f3461b8bf226e5",
+  "cpu_model": "Intel(R) Xeon(R) Silver 4210R CPU @ 2.40GHz",
+  "created_at_unix": 1791433899.188009,
+  "created_at_utc": "2026-10-08T04:31:39Z",
+  "cuda_visible_devices": "0",
+  "elapsed_s": 2810.1666152129765,
+  "ep_len": 360,
+  "eval_sequences_path": "/share/data/ripl/tianchong/projects/Policy_Eval_Done_Right/scratch/calvin_final_20261007/code/simple_policy_calvin/eval_sequences.json",
+  "eval_sequences_sha256": "c99e041c255df3408ebf3bbb4feea8b407e17e60e7c07d172a6ea7ba6680e8ca",
+  "eval_steps": [
+    150000
+  ],
+  "gpus": [
+    {
+      "driver_version": "595.104.02",
+      "name": "NVIDIA RTX A6000",
+      "uuid": "GPU-294ef509-47a2-3d7a-69f2-011381aa964c"
+    }
+  ],
+  "hostname": "g15.ttic.edu",
+  "num_sequences": 1000,
+  "protocol": "official_1000_sequences",
+  "python": "3.8.20 (default, Oct  3 2024, 15:24:27) \n[GCC 11.2.0]",
+  "repo_commit": "b11e4b24db157884782db5355b2af6b2603d2175",
+  "repo_root": "/share/data/ripl/tianchong/projects/Policy_Eval_Done_Right/scratch/calvin_final_20261007/code",
+  "repo_status_short": "M simple_policy_calvin/eval.py",
+  "run_name": "apr24_ABCDD_start_offset_0_end_offset_0_seed_0",
+  "seed": 0,
+  "singularity_name": "",
+  "slurm_job_id": "2651836",
+  "slurm_job_name": "calvin_ABCDD_final150k",
+  "step": 150000,
+  "stepping_mode": "lazy_no_render",
+  "submodule_status": "cc8507a08ad69d2a47e3444b9520e73179bae0a2 CALVIN (remotes/origin/HEAD)\n 1431a46bd36bde5903fb6345e68b5ccc30def666 CALVIN/calvin_env (1431a46)\n dd53360d9a8c186f0d6439372ec0be0fa5e21731 CALVIN/calvin_env/tacto (heads/main)\n-be56e66961d93d8061466e215fc640f79f861a8e LIBERO",
+  "torch_cuda": "12.1",
+  "torch_version": "2.4.1+cu121"
+}

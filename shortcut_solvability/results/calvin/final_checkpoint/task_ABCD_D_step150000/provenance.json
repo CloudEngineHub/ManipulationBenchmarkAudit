@@ -1,0 +1,100 @@
+{
+  "source_bundle": "bh:/share/data/ripl/tianchong/projects/Policy_Eval_Done_Right/outputs/official_eval_apr24_ABCDD_step150000_20261007_retry1",
+  "selected_source_bundle": "bh:/share/data/ripl/tianchong/projects/calvin_codex_sandbox/Policy_Eval_Done_Right/outputs/official_eval_apr24_ABCDD_step100000_retry1_py38fix/eval/step100000",
+  "comparison": {
+    "paper_cell": "ABCD->D",
+    "selected_artifact_dir": "best_checkpoint/task_ABCD_D_step100000",
+    "final_artifact_dir": "final_checkpoint/task_ABCD_D_step150000",
+    "selected_step": 100000,
+    "final_step": 150000,
+    "num_sequences": 1000,
+    "selected_atc": "3.872",
+    "final_atc": "3.783",
+    "selected_minus_final_atc": "0.089"
+  },
+  "raw_trials_sha256": "7faf3f5a7c1479d76211cc26e95cad7eb51d554d361f1c8cab14917b41b96ecd",
+  "outcome_counts": {
+    "0": 74,
+    "1": 98,
+    "2": 78,
+    "3": 72,
+    "4": 77,
+    "5": 601
+  },
+  "chain_success_counts": {
+    "1": 926,
+    "2": 828,
+    "3": 750,
+    "4": 678,
+    "5": 601
+  },
+  "validation": "1000 unique ordered indices 0..999; integer outcomes 0..5; ATC and all chain rates independently recomputed; no rollout exclusions or retries",
+  "slurm_accounting": "JobID|State|ExitCode|Start|End|Elapsed|NodeList|AllocCPUS|ReqTRES|AllocTRES\n2651829|FAILED|0:0|2026-10-07T22:35:25|2026-10-07T22:35:27|00:00:02|g15|2|billing=2,cpu=2,gres/gpu=1,mem=8000M,node=1|billing=2,cpu=2,gres/gpu:nvidia_rtx_a6000=1,gres/gpu=1,node=1\n2651829.batch|FAILED|0:0|2026-10-07T22:35:25|2026-10-07T22:35:27|00:00:02|g15|2||cpu=2,gres/gpu:nvidia_rtx_a6000=1,gres/gpu=1,mem=0,node=1\n2651829.extern|COMPLETED|0:0|2026-10-07T22:35:25|2026-10-07T22:35:27|00:00:02|g15|2||billing=2,cpu=2,gres/gpu:nvidia_rtx_a6000=1,gres/gpu=1,node=1\n2651833|FAILED|1:0|2026-10-07T22:37:26|2026-10-07T22:39:43|00:02:17|g15|2|billing=2,cpu=2,gres/gpu=1,mem=8000M,node=1|billing=2,cpu=2,gres/gpu:nvidia_rtx_a6000=1,gres/gpu=1,node=1\n2651833.batch|FAILED|1:0|2026-10-07T22:37:26|2026-10-07T22:39:43|00:02:17|g15|2||cpu=2,gres/gpu:nvidia_rtx_a6000=1,gres/gpu=1,mem=0,node=1\n2651833.extern|COMPLETED|0:0|2026-10-07T22:37:26|2026-10-07T22:39:43|00:02:17|g15|2||billing=2,cpu=2,gres/gpu:nvidia_rtx_a6000=1,gres/gpu=1,node=1\n2651836|COMPLETED|0:0|2026-10-07T22:44:27|2026-10-07T23:31:44|00:47:17|g15|2|billing=2,cpu=2,gres/gpu=1,mem=8000M,node=1|billing=2,cpu=2,gres/gpu:nvidia_rtx_a6000=1,gres/gpu=1,node=1\n2651836.batch|COMPLETED|0:0|2026-10-07T22:44:27|2026-10-07T23:31:44|00:47:17|g15|2||cpu=2,gres/gpu:nvidia_rtx_a6000=1,gres/gpu=1,mem=0,node=1\n2651836.extern|COMPLETED|0:0|2026-10-07T22:44:27|2026-10-07T23:31:44|00:47:17|g15|2||billing=2,cpu=2,gres/gpu:nvidia_rtx_a6000=1,gres/gpu=1,node=1\n",
+  "prior_attempts_source_bundle": "bh:/share/data/ripl/tianchong/projects/Policy_Eval_Done_Right/outputs/official_eval_apr24_ABCDD_step150000_20261007",
+  "prior_attempts": [
+    {
+      "job_id": "2651829",
+      "outcome": "failed before rollout: Git rejected symlinked submodule"
+    },
+    {
+      "job_id": "2651833",
+      "outcome": "failed before rollout: historical dataset cache absent"
+    }
+  ],
+  "telemetry_only_patch": "diff --git a/simple_policy_calvin/eval.py b/simple_policy_calvin/eval.py\nindex 85c06e6..c49e158 100644\n--- a/simple_policy_calvin/eval.py\n+++ b/simple_policy_calvin/eval.py\n@@ -373,7 +373,7 @@ def main() -> None:\n     if not config_path.is_absolute():\n         config_path = repo_root / config_path\n \n-    set_wandb_api_key_from_user()\n+    # Telemetry disabled for this local evidence-only evaluation.\n     job_start_time = time.time()\n     while True:\n         cfg = _load_yaml(config_path)\n@@ -388,7 +388,7 @@ def main() -> None:\n         project=cfg[\"wandb_project\"],\n         id=cfg[\"wandb_run_id\"],\n         resume=\"allow\",\n-        settings=wandb.Settings(mode=\"shared\", x_primary=False, x_label=\"eval\"),\n+        settings=wandb.Settings(mode=\"disabled\"),\n     )\n     wandb.define_metric(\"eval_step\")\n     wandb.define_metric(\"eval/*\", step_metric=\"eval_step\")\n",
+  "config_changed_keys": [
+    "calvin_dataset_path",
+    "eval_dir",
+    "eval_steps"
+  ],
+  "environment_config": "shortcut_solvability/configs/calvin/official_validation_merged_config.yaml",
+  "environment_config_source": "shortcut_solvability/configs/calvin/official_validation_config_source.json",
+  "comparability_limits": [
+    "Selected run: L40S / AMD EPYC 9274F / NVIDIA 580.95.05. Final run hardware and driver recorded in artifact_manifest.json; hardware differs, so this is not a bitwise-controlled checkpoint-only experiment.",
+    "Selected full historical package lock, DINO cache source hashes and dataset environment-config hash were not preserved. Current full package snapshots and DINO source hashes are included. The environment config was recovered from the official ABCD->D ZIP (last modified 2022-09-15); only this config is consumed by environment creation."
+  ],
+  "checkpoint_external_release": {
+    "status": "pending approval; no weights uploaded by this task",
+    "source": "bh:/share/data/ripl/tianchong/projects/Policy_Eval_Done_Right/outputs/apr24_ABCDD_start_offset_0_end_offset_0_seed_0/checkpoints/step150000.pt",
+    "file_size_bytes": 1097137774,
+    "sha256": "07e8055f342d52423f184eab941e2d56854278814629b98db443fcae03a85397",
+    "proposed_payload_member": "shortcut_calvin/calvin_ABCD_D/step150000.pt"
+  },
+  "environment_config_crosscheck": "SHA256 also matches the project cache calvin_debug_dataset/validation/.hydra/merged_config.yaml (read-only crosscheck; file used was extracted from the official ABCD->D ZIP)",
+  "source_bundle_files": {
+    "calvin_commit.txt": "e190aabadd20c1f61d85142c7b9a81fc40c8704fa0eef38edd7512d3ac503339",
+    "calvin_submodules.txt": "af2c78213166002f95dbcd1a36e465b89e112b6ee5976e4db7f3046de770cca3",
+    "code_commit.txt": "a67c1969f5d76834d0bd8e194dc87e5bc9b349d72897fa75cb9caa84b557659c",
+    "code_status.txt": "99c5e15fd5a6cd19410f9fbbf0c38a433439f27ef33245a4bd748f44e48f04f6",
+    "conda_explicit.txt": "0f1b918d032f83c6715194ca4dbf49a4ea7503d4469caf7b41db93d4a025fae7",
+    "dinov2_source_sha256.json": "872dca0521628b4cfbe7de5316984052123626123522f177928cdc3ba220a74c",
+    "eval/step150000/artifact_manifest.json": "9afeacd71e32f4c842ca29d1d02759d5d5eca5f932bef13306b284992fc5bcb8",
+    "eval/step150000/command.txt": "c53700d49a2d05e8cd784292f3c24b01efe1931d85dd6cfd492e7883d0d2324d",
+    "eval/step150000/config.yaml": "88f6b7e888cc60364cf2dbec812d6a026b11f4fc087f497806f3461b8bf226e5",
+    "eval/step150000/summary.json": "aa90ede20876508f7bd4385a0cc24d83afc6be3d18e758595b77a8a81d68b137",
+    "eval/step150000/trials.csv": "7faf3f5a7c1479d76211cc26e95cad7eb51d554d361f1c8cab14917b41b96ecd",
+    "eval.sbatch": "6b465f54fbac88ae093b16c0b781044a15ceba306646eea698953f5d669016f3",
+    "eval_config.yaml": "88f6b7e888cc60364cf2dbec812d6a026b11f4fc087f497806f3461b8bf226e5",
+    "executed_code/eval.py": "5a75a159afbfe8b3bad7674a5f60428862a60a96509001f418ce2e3fdbc77b8b",
+    "executed_code/eval_sequences.json": "c99e041c255df3408ebf3bbb4feea8b407e17e60e7c07d172a6ea7ba6680e8ca",
+    "executed_code/official_artifact.py": "e88b2915b9db59f2d2a81dc2f770748a842c8ef8ae1c2db46fe410e68cfc5622",
+    "executed_code/transformer.py": "e2ba639900b564cef9075b8e86624ad85e7101b4414af72e0830fc372f9b1c7b",
+    "executed_code/utils.py": "10c128fc97bc3cbf305be20a1066ed3cf39cd3b60c3a214454615f6cedfa0a66",
+    "extract_official_config.py": "bdd04bd1e6f92fb60d95ed5b7abb1c882dd8a998d9cdace0f8d966ccf2b3ed7c",
+    "lscpu.txt": "45482b71c0f6fe01515512c8fa27e280b4986271023b3d17d0518bf9c9f7f07a",
+    "nvidia_smi.txt": "e8abe292df112536dc8d05faaf176f6afe57ea12b39dad072dbb2aed3ccb3c0b",
+    "official_ABCD_D/validation/.hydra/merged_config.yaml": "75c1c15067e4bd543d1b69a654769836f6cbbf55c4e44ae30da255c45609523f",
+    "official_config_source.json": "11d72bf8c29d45187e7e54749ede9069455755d2d09dff77046fe9c69b603ba8",
+    "pip_freeze.txt": "96686d4af3e9eb8ca53afd36b074411f72d83f16839040ccb77d24f9f8542800",
+    "postrun_validation.json": "486d0aea535a7eda5d4c860435908b87516c3174474447633945f85907c60eab",
+    "sacct.txt": "6a0649eee08ad833c9aa75c955feaf127b3ef4770010fa1812f5fcacbd7ebf10",
+    "slurm_2651836_eval.out": "a42da83bc0d09dcd171663514045c28b2c6ee7e0565666e6714030aff5cf6fbe",
+    "slurm_job.txt": "c602cf4d0886a9f9e819b2d09aa6d01532bd85b19457271981351b2efdcb886b",
+    "telemetry_only.patch": "f5cb89f3cce6ac66f178585cff40558db3ed1548f5071beae61f6a4f69d85da2",
+    "verified_inputs.json": "77a02486aa68d547613698c1a06fb2bc6b018566fde3cb6baa3b6db327b8504c",
+    "verify_inputs.py": "a20b6d011352e1be1cbcd1b22f2be456b4c76d46ad7ee58cbae7d56b1e581dfb",
+    "zip_tail.bin": "fa51f8fa3ae20e3bf1ec257b822a2628719afc46e02c45463456d3fb12d5224d",
+    "zip_tail_headers.txt": "9ea7b0a23f6438864f542c9e2feb767d94b354d9f4c30ea94336c22bd2a2ef6d"
+  },
+  "log_review": "No rollout exception; PyBullet __del__ emitted the same double-disconnect warning as the selected run after env.close; Slurm COMPLETED 0:0."
+}

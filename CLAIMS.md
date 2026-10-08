@@ -21,6 +21,7 @@ The claims below are CPU-recomputed unless a diagnostic README or code directory
 
 1. LIBERO fixed-instruction shortcut policy: public-recomputed from `shortcut_solvability/results/libero/results.csv` and `shortcut_solvability/results/libero/best_checkpoint/*/{summary.json,trials.csv}`. Headline cells are Spatial `495/500 = 99.0%`, Object `500/500 = 100.0%`, Goal `494/500 = 98.8%`, and Long `462/500 = 92.4%`.
 2. CALVIN fixed-instruction shortcut policy: public-recomputed from `shortcut_solvability/results/calvin/results.csv` and `shortcut_solvability/results/calvin/best_checkpoint/*/{summary.json,trials.csv}`. Headline complete cells are `D->D` ATC `3.123` over `1000` sequences and `ABCD->D` ATC `3.872` over `1000` sequences. `ABC->D` ATC `3.242` is included as supporting evidence and remains labeled `no_full_official_artifact_manifest`.
+3. CALVIN ABCD→D selected versus final checkpoint: [comparison and source paths](shortcut_solvability/results/calvin/selected_vs_final.csv) give selected step 100000 ATC `3.872` and final step 150000 ATC `3.783`, a difference of `0.089`, each over `1000` official sequences. Final outcomes and provenance are under `shortcut_solvability/results/calvin/final_checkpoint/task_ABCD_D_step150000/`; recomputation validates all sequence indices and chain rates. Hardware differs between these runs, and external release of the final weights remains pending.
 
 ## Statistical Significance
 

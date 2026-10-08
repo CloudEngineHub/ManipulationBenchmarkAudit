@@ -1,0 +1,2 @@
+paper_cell,selected_artifact_dir,final_artifact_dir,selected_step,final_step,num_sequences,selected_atc,final_atc,selected_minus_final_atc
+ABCD->D,best_checkpoint/task_ABCD_D_step100000,final_checkpoint/task_ABCD_D_step150000,100000,150000,1000,3.872,3.783,0.089

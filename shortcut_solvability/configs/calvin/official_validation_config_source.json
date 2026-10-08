@@ -1,0 +1,25 @@
+{
+  "url": "http://calvin.cs.uni-freiburg.de/dataset/task_ABCD_D.zip",
+  "archive_size_bytes": 704022347117,
+  "archive_etag": "\"a3eb007d6d-5e8b96d2656f3\"",
+  "archive_last_modified": "Thu, 15 Sep 2022 16:06:21 GMT",
+  "member": "task_ABCD_D/validation/.hydra/merged_config.yaml",
+  "local_header_offset": 703708146475,
+  "compression": "deflate",
+  "compressed_size": 1951,
+  "uncompressed_size": 7287,
+  "crc32": "38bb16dc",
+  "sha256": "75c1c15067e4bd543d1b69a654769836f6cbbf55c4e44ae30da255c45609523f",
+  "retrieval": "HTTP range; ZIP central-directory/local-header identity, uncompressed length and CRC verified; full archive not downloaded or SHA256 verified",
+  "headers": {
+    "Date": "Thu, 08 Oct 2026 03:43:25 GMT",
+    "Server": "Apache/2.4.52 (Ubuntu)",
+    "Last-Modified": "Thu, 15 Sep 2022 16:06:21 GMT",
+    "ETag": "\"a3eb007d6d-5e8b96d2656f3\"",
+    "Accept-Ranges": "bytes",
+    "Content-Length": "3053",
+    "Content-Range": "bytes 703708146475-703708149527/704022347117",
+    "Connection": "close",
+    "Content-Type": "application/zip"
+  }
+}

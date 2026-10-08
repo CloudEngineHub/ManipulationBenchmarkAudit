@@ -91,6 +91,12 @@
       "role": "internal LIBERO init-state provenance exposed by parent gitlink",
       "git_commit": "3fc77b643c2c1a2b33061cfc7b7fc7c0054d5b9e",
       "worktree_status": "main matched origin/main when inspected; parent recorded LIBERO gitlink 0b7f0ecaafb5b500f39cbbafbd62dc53aec9d8e1"
+    },
+    {
+      "path": "bh:/share/data/ripl/tianchong/projects/Policy_Eval_Done_Right/outputs/official_eval_apr24_ABCDD_step150000_20261007_retry1",
+      "role": "CALVIN ABCD->D final step150000 official 1000-sequence evaluation",
+      "git_commit": "b11e4b24db157884782db5355b2af6b2603d2175",
+      "worktree_status": "isolated historical evaluator worktree; telemetry-only patch preserved in final-checkpoint provenance.json"
     }
   ],
   "source_candidates_inspected_not_copied_directly": [
@@ -120,7 +126,7 @@
         "shortcut_calvin"
       ],
       "source": "/home/ripl/workspace/corl_2026_supp/shortcut_solvability",
-      "notes": "Includes compact result summaries, configs, per-trial/per-sequence CSVs, and first-party LIBERO/CALVIN DINOv2/task-id trainer/evaluator code. Checkpoints, datasets, and logs remain excluded from Git and are referenced through Drive payloads/upstream benchmark locations. CPU optimizer/save/load/inference smokes passed; strict loading passed for all seven actual packaged shortcut checkpoints; original-vs-release _encode and full-forward equality passed for one actual LIBERO and one actual CALVIN checkpoint; seeded augmentation equality passed."
+      "notes": "Includes compact result summaries, configs, per-trial/per-sequence CSVs, and first-party LIBERO/CALVIN DINOv2/task-id trainer/evaluator code. Checkpoints, datasets, and logs remain excluded from Git and are referenced through Drive payloads/upstream benchmark locations. CPU optimizer/save/load/inference smokes passed; strict loading passed for all seven actual packaged shortcut checkpoints; original-vs-release _encode and full-forward equality passed for one actual LIBERO and one actual CALVIN checkpoint; seeded augmentation equality passed. ABCD->D step150000 final-checkpoint evidence and selected/final comparison are included under results/calvin/final_checkpoint and selected_vs_final.csv. The selected step100000 result is unchanged. The exact recovered official environment config, runtime package snapshots, checkpoint identity and source/log hashes are included; raw logs remain in the source bundle, and final weights await external release."
     },
     {
       "directory": "statistical_significance",
@@ -206,7 +212,8 @@
       "exact-input validation with NumPy and CPU PyTorch",
       "analysis release-current CSV regeneration",
       "analysis frozen paper artifact regeneration from committed paper_inputs",
-      "paper-versus-current significance comparison labels 92 differences"
+      "paper-versus-current significance comparison labels 92 differences",
+      "CALVIN ABCD->D selected-versus-final ATC difference, final sequence indices/outcome bounds and official checkpoint/config/manifest identity"
     ],
     "expected_intentional_exclusions": [
       "LIBERO Layer 2 full rollout directories; the released selected per-episode rows and policy-level summary claim are checked from committed CSVs",

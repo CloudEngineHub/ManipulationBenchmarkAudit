@@ -7,10 +7,14 @@ This directory contains the public shortcut-solvability release for the benchmar
 ## Contents
 
 1. `results/libero/results.csv` and `results/libero/best_checkpoint/*/{summary.json,trials.csv}` record the four LIBERO official 50-trial-per-task cells: Spatial `495/500 = 99.0%`, Object `500/500 = 100.0%`, Goal `494/500 = 98.8%`, and Long/LIBERO-10 `462/500 = 92.4%`.
-2. `results/calvin/results.csv` and `results/calvin/best_checkpoint/*/{summary.json,trials.csv}` record the three CALVIN cells. `D -> D` and `ABCD -> D` have complete official-result bundles; `ABC -> D` preserves the measured `1000`-sequence result but its historical full artifact manifest was not recovered.
+2. `results/calvin/results.csv` maps the three selected CALVIN cells under `best_checkpoint/` and the ABCD→D final checkpoint under `final_checkpoint/`. `D -> D` and `ABCD -> D` have complete official-result bundles; `ABC -> D` preserves the measured `1000`-sequence result but its historical full artifact manifest was not recovered.
 3. `results/calvin/official_1000_eval_sequences.json` is the official CALVIN sequence list used by these runs.
 4. `configs/libero/*.yaml` and `configs/calvin/*.yaml` are the selected final training/evaluation configs for the released cells.
 5. `code/shortcut_policy/` contains the runnable loaders, model, training commands, evaluation commands, and CALVIN public-data preparation command.
+
+ABCD→D scores **3.872** at the [selected step 100000](results/calvin/best_checkpoint/task_ABCD_D_step100000/summary.json) and **3.783** at the [final step 150000](results/calvin/final_checkpoint/task_ABCD_D_step150000/summary.json), each on the same 1000 official sequences with a 360-step subtask horizon. [selected_vs_final.csv](results/calvin/selected_vs_final.csv) links both result sources and records the **0.089 ATC** difference. The final bundle includes the exact executed config/command, runtime package snapshots, and [provenance](results/calvin/final_checkpoint/task_ABCD_D_step150000/provenance.json). Its GPU/CPU/driver differ from the selected run; this is not a bitwise-controlled comparison. The recovered official environment config and its dataset-ZIP identity are in `configs/calvin/official_validation_merged_config.yaml` and `official_validation_config_source.json`.
+
+The step-150000 weight file has not been added to the external checkpoint release by this update. Its exact source path, size, and SHA256 are recorded in the final bundle and `../provenance/checkpoint_identity_manifest.csv`; the proposed payload member is `shortcut_calvin/calvin_ABCD_D/step150000.pt`.
 
 ## Upstream Inputs
 

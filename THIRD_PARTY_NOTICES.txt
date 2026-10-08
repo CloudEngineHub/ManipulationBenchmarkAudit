@@ -27,10 +27,11 @@ The checkpoint archives are external payloads rather than tracked Git files, but
 Official source/model cards: https://github.com/facebookresearch/dinov2, https://huggingface.co/facebook/dinov2-small, https://huggingface.co/facebook/dinov2-base
 Credit/license: Meta AI Research / Facebook Research DINOv2, Apache License 2.0 for DINOv2 code and model weights. The shared Apache-2.0 text appears once in Section 4 below.
 
-3. CALVIN symbolic initial-state helper
+3. CALVIN symbolic initial-state helper and environment configuration
 
 Affected released path/function:
 - creeping_overfitting/code/calvin/calvin_sequence_manifest.py: official_initial_states()
+- shortcut_solvability/configs/calvin/official_validation_merged_config.yaml: unchanged validation environment configuration recovered from the official task_ABCD_D.zip dataset; retrieval identity is recorded in official_validation_config_source.json beside it.
 
 The local official_initial_states() helper mirrors the symbolic initial-state keys, values, and validity filter used by CALVIN's calvin_models/calvin_agent/evaluation/multistep_sequences.py get_sequences().
 

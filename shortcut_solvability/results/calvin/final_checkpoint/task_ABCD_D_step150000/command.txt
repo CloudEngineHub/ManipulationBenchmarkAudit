@@ -1,0 +1,1 @@
+/share/data/ripl/tianchong/conda/envs/calvin/bin/python -m simple_policy_calvin.eval /share/data/ripl/tianchong/projects/Policy_Eval_Done_Right/outputs/official_eval_apr24_ABCDD_step150000_20261007_retry1/eval_config.yaml

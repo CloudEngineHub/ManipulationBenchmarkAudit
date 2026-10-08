@@ -592,13 +592,19 @@ def recompute_shortcut(root: Path, errors: list[str]) -> dict[str, Any]:
     calvin_rows = read_csv(base / "calvin" / "results.csv")
     for row in calvin_rows:
         artifact_dir = row["artifact_dir"]
-        summary = load_json(base / "calvin" / "best_checkpoint" / artifact_dir / "summary.json")
-        trials = read_rows(base / "calvin" / "best_checkpoint" / artifact_dir / "trials.csv")
+        summary = load_json(base / "calvin" / artifact_dir / "summary.json")
+        trials = read_rows(base / "calvin" / artifact_dir / "trials.csv")
+        if [trial[0] for trial in trials] != [str(i) for i in range(1000)]:
+            fail(errors, f"Shortcut CALVIN {artifact_dir}: sequence indices must be exactly 0..999")
+        if any(len(trial) != 2 or trial[1] not in {"0", "1", "2", "3", "4", "5"} for trial in trials):
+            fail(errors, f"Shortcut CALVIN {artifact_dir}: outcomes must be integers in 0..5")
         completed = [int(trial[1]) for trial in trials]
         total = len(completed)
         atc = sum(completed) / total
         compare_int(errors, f"Shortcut CALVIN {artifact_dir} sequences", total, row["num_sequences"])
         compare_int(errors, f"Shortcut CALVIN {artifact_dir} summary sequences", total, summary["num_sequences"])
+        compare_int(errors, f"Shortcut CALVIN {artifact_dir} horizon", int(row["ep_len"]), 360)
+        compare_int(errors, f"Shortcut CALVIN {artifact_dir} step", summary["step"], row["step"])
         compare_float(errors, f"Shortcut CALVIN {artifact_dir} ATC", atc, row["avg_seq_len_atc"])
         compare_float(errors, f"Shortcut CALVIN {artifact_dir} summary ATC", atc, summary["avg_seq_len"])
         for threshold in range(1, 6):
@@ -606,7 +612,21 @@ def recompute_shortcut(root: Path, errors: list[str]) -> dict[str, Any]:
             compare_float(errors, f"Shortcut CALVIN {artifact_dir} chain_sr_{threshold}", chain_rate, row[f"chain_sr_{threshold}"])
             compare_float(errors, f"Shortcut CALVIN {artifact_dir} summary chain_sr_{threshold}", chain_rate, summary["chain_sr"][str(threshold)])
 
-    return {"libero": libero_rows, "calvin": calvin_rows}
+    comparisons = read_csv(base / "calvin" / "selected_vs_final.csv")
+    by_artifact = {row["artifact_dir"]: row for row in calvin_rows}
+    if len(by_artifact) != len(calvin_rows) or len(comparisons) != 1:
+        fail(errors, "Shortcut CALVIN: expected unique result paths and one ABCD->D selected/final comparison")
+    for row in comparisons:
+        scores = {}
+        for role in ["selected", "final"]:
+            source = by_artifact[row[f"{role}_artifact_dir"]]
+            compare_int(errors, f"Shortcut CALVIN {role} sequences", int(source["num_sequences"]), row["num_sequences"])
+            compare_int(errors, f"Shortcut CALVIN {role} step", int(source["step"]), row[f"{role}_step"])
+            scores[role] = float(source["avg_seq_len_atc"])
+            compare_float(errors, f"Shortcut CALVIN {role} ATC", scores[role], row[f"{role}_atc"])
+        compare_float(errors, f"Shortcut CALVIN {row['paper_cell']} selected minus final", scores["selected"] - scores["final"], row["selected_minus_final_atc"])
+
+    return {"libero": libero_rows, "calvin": calvin_rows, "calvin_selected_vs_final": comparisons}
 
 
 def recompute_release(root: Path) -> tuple[dict[str, Any], list[str]]:
