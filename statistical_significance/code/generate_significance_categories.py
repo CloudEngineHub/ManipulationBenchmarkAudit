@@ -308,7 +308,7 @@ def category_for(
         return NO_IMPROVEMENT, necessary, sufficient
     if L <= 0:
         return PROVABLY_NOT_SIGNIFICANT, necessary, sufficient
-    if necessary is not None and L < necessary:
+    if necessary is None or L < necessary:
         return PROVABLY_NOT_SIGNIFICANT, necessary, sufficient
     if sufficient is not None and L >= sufficient:
         return PROVABLY_SIGNIFICANT, necessary, sufficient

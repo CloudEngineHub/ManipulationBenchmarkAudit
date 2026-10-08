@@ -724,7 +724,7 @@ def validate_significance_categories(root: Path, errors: list[str]) -> dict[str,
             return "no_improvement"
         if count_delta <= 0:
             return "provably_not_significant"
-        if necessary is not None and count_delta < necessary:
+        if necessary is None or count_delta < necessary:
             return "provably_not_significant"
         if sufficient is not None and count_delta >= sufficient:
             return "provably_significant"

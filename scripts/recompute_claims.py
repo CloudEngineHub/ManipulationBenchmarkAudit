@@ -15,9 +15,9 @@ from typing import Any
 TOL = 1e-6
 SIGNIFICANCE_CATEGORY_HEADLINES = {
     "no_improvement": 497,
-    "provably_not_significant": 145,
+    "provably_not_significant": 149,
     "provably_significant": 331,
-    "indeterminate": 376,
+    "indeterminate": 372,
 }
 SIGNIFICANCE_EXCLUDED_MISSING_SCORES = 212
 
