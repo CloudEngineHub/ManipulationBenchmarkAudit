@@ -93,13 +93,13 @@ python analysis/run_analysis.py compare-paper \
   --output-dir "$ANALYSIS_TMP/paper_comparison"
 ```
 
-The command writes `paper_vs_release_significance_differences.csv` and `paper_vs_release_significance_summary.csv`. With the committed paper inputs and release-current generator, it exits with status `1` because `92` row classifications differ. The row sets and paper-name order match for all five pie inputs. The observed causes are `68` zero-or-negative-gain definition differences, `13` integer-count rounding differences, `6` threshold-equality differences, and `5` saturated or undefined cutoff differences.
+The command writes `paper_vs_release_significance_differences.csv` and `paper_vs_release_significance_summary.csv`. The committed paper inputs preserve the historical pre-camera-ready snapshot. With these inputs and the release-current generator, it exits with status `1` because `88` row classifications differ. The row sets and paper-name order match for all five pie inputs. The observed causes are `68` zero-or-negative-gain definition differences, `9` integer-count rounding differences, `6` threshold-equality differences, and `5` saturated or undefined cutoff differences.
 
 The committed `statistical_significance_bucket_comparison.csv` labels the bucket order as `negative;not_significant;possibly_significant;certainly_significant`. The paper/current bucket counts are:
 
-1. LIBERO: paper `302,164,167,156`; current `363,112,170,144`; total `789`.
+1. LIBERO: paper `302,164,167,156`; current `363,117,165,144`; total `789`.
 2. CALVIN: paper `21,3,36,47`; current `24,0,36,47`; total `107`.
-3. SimplerEnv: paper `13,23,62,24`; current `17,16,62,27`; total `122`.
+3. SimplerEnv: paper `13,23,62,24`; current `17,16,65,24`; total `122`.
 4. RoboCasa: paper `4,0,10,16`; current `4,0,10,16`; total `30`.
 5. RoboTwin 2.0: paper `2,0,3,14`; current `2,0,3,14`; total `19`.
 

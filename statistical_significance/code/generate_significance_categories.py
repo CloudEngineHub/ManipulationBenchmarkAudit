@@ -14,6 +14,7 @@ import argparse
 import csv
 import math
 from dataclasses import dataclass
+from decimal import Decimal
 from pathlib import Path
 from statistics import NormalDist
 from typing import Iterable
@@ -29,7 +30,7 @@ CATEGORIES = [
     PROVABLY_SIGNIFICANT,
     INDETERMINATE,
 ]
-COUNT_ROUNDING_METHOD = "python_round_nearest_even_matches_significance_cutoffs"
+COUNT_ROUNDING_METHOD = "decimal_nearest_even"
 
 
 @dataclass(frozen=True)
@@ -119,12 +120,12 @@ PARAMS: list[BenchmarkParams] = [
         "sam_simplerenv_widowx_bridge_official_prev_sota.csv",
         "simplerenv_widowx_bridge_success_rate",
         "simplerenv_widowx_bridge_prev_sota_success_rate",
-        T=1,
-        S=96,
+        T=4,
+        S=24,
         R=1,
         score_unit="percent",
         score_multiplier=100.0,
-        notes="Protocol-level binary success rate over 4 tasks x 24 trials; per-task scores are not used in this public aggregate audit.",
+        notes="Task-stratified binary success rate over 4 tasks x 24 trials; bounds optimize over unknown per-task scores.",
     ),
     BenchmarkParams(
         "RoboCasa",
@@ -258,28 +259,28 @@ def sufficient_L_for_A(A: int, params: BenchmarkParams, z: float, qmax_all=None)
     return threshold
 
 
-def parse_score(value: str) -> float | None:
+def parse_score(value: str) -> Decimal | None:
     stripped = value.strip()
     if not stripped:
         return None
-    return float(stripped)
+    return Decimal(stripped)
 
 
-def score_to_scaled_count(score: float, params: BenchmarkParams) -> float:
+def score_to_scaled_count(score: Decimal, params: BenchmarkParams) -> Decimal:
     N = params.T * params.S
     if params.score_unit == "percent":
-        if not 0.0 <= score <= 100.0:
+        if not 0 <= score <= 100:
             raise ValueError(f"{params.benchmark} {params.track}: percent score out of range: {score}")
-        return (score / 100.0) * N
+        return score * N / 100
     if params.score_unit == "raw_atc":
-        if not 0.0 <= score <= params.R:
+        if not 0 <= score <= params.R:
             raise ValueError(f"{params.benchmark} {params.track}: raw ATC score out of range: {score}")
         return score * N
     raise ValueError(f"unsupported score unit: {params.score_unit}")
 
 
-def score_to_count(score: float, params: BenchmarkParams) -> int:
-    return int(round(score_to_scaled_count(score, params)))
+def score_to_count(score: Decimal, params: BenchmarkParams) -> int:
+    return round(score_to_scaled_count(score, params))
 
 
 def count_delta_to_score_delta(count_delta: int | None, params: BenchmarkParams) -> str:
@@ -289,12 +290,12 @@ def count_delta_to_score_delta(count_delta: int | None, params: BenchmarkParams)
     return format_float((count_delta / N) * params.score_multiplier)
 
 
-def format_float(value: float) -> str:
+def format_float(value: float | Decimal) -> str:
     return f"{value:.10g}"
 
 
 def category_for(
-    reported_delta: float,
+    reported_delta: Decimal,
     A: int,
     B: int,
     params: BenchmarkParams,
@@ -429,7 +430,7 @@ def build_rows(root: Path, alpha: float) -> tuple[list[dict[str, str]], list[dic
 def write_csv(path: Path, rows: list[dict[str, str]], fieldnames: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="raise")
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="raise", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 

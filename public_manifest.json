@@ -58,7 +58,7 @@
       "data_source_dependency": "Archive extraction commands were tested. A real-DINO CPU optimizer/save/load smoke on a real stack NPZ passed, one real stack saved-demo replay passed, and one actual stack step6500 checkpoint eval episode passed. This is not a full 96-episode replay/eval reproduction.",
       "shortcut_solvability": "CPU optimizer/save/load/inference smokes passed. Strict loading passed for all seven actual packaged shortcut checkpoints. Original-vs-release _encode and full forward are exactly equal for one actual LIBERO and one actual CALVIN checkpoint, and seeded augmentation outputs are exactly equal.",
       "checksum_manifest": "SHA256SUMS is refreshed for this final local release tree.",
-      "analysis": "analysis/run_analysis.py current --expected-dir passes. paper-inputs regeneration uses committed inputs. compare-paper intentionally exits 1 for 92 labeled frozen-paper/current significance classification differences."
+      "analysis": "analysis/run_analysis.py current --expected-dir passes. paper-inputs regeneration uses committed inputs. compare-paper intentionally exits 1 for 88 labeled frozen-paper/current significance classification differences."
     }
   },
   "source_candidates_used": [
@@ -193,7 +193,7 @@
         "analysis_release_current_values"
       ],
       "source": "Release integration from committed public result files and frozen paper CSV inputs under analysis/paper_inputs/.",
-      "notes": "Includes CPU-only analysis regeneration code, eight frozen paper CSV inputs, committed release-current CSV outputs, and commands for exact paper-input regeneration, current-output regeneration, and labeled paper-versus-current comparison. The comparison intentionally reports 92 significance-classification differences."
+      "notes": "Includes CPU-only analysis regeneration code, eight frozen paper CSV inputs, committed release-current CSV outputs, and commands for exact paper-input regeneration, current-output regeneration, and labeled paper-versus-current comparison. The comparison intentionally reports 88 significance-classification differences."
     }
   ],
   "validation": {
@@ -212,7 +212,7 @@
       "exact-input validation with NumPy and CPU PyTorch",
       "analysis release-current CSV regeneration",
       "analysis frozen paper artifact regeneration from committed paper_inputs",
-      "paper-versus-current significance comparison labels 92 differences",
+      "paper-versus-current significance comparison labels 88 differences",
       "CALVIN ABCD->D selected-versus-final ATC difference, final sequence indices/outcome bounds and official checkpoint/config/manifest identity"
     ],
     "expected_intentional_exclusions": [

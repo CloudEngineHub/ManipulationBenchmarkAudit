@@ -71,7 +71,7 @@ SIGNIFICANCE_CATEGORIES = {
     "provably_not_significant",
     "provably_significant",
 }
-COUNT_ROUNDING_METHOD = "python_round_nearest_even_matches_significance_cutoffs"
+COUNT_ROUNDING_METHOD = "decimal_nearest_even"
 
 EXPECTED_SIGNIFICANCE_PARAMS = {
     ("LIBERO", "spatial"): (
@@ -123,8 +123,8 @@ EXPECTED_SIGNIFICANCE_PARAMS = {
         "leaderboards/stat_significance_sam_export_20260522T233929/sam_simplerenv_widowx_bridge_official_prev_sota.csv",
         "simplerenv_widowx_bridge_success_rate",
         "simplerenv_widowx_bridge_prev_sota_success_rate",
-        "1",
-        "96",
+        "4",
+        "24",
         "1",
         "percent",
     ),
@@ -891,8 +891,8 @@ def validate_analysis_outputs(root: Path, errors: list[str]) -> dict[str, Any]:
             files = module.write_current_values(root, current_dir, root / "analysis" / "paper_inputs")
             module.compare_expected_dir(root / "analysis" / "release_current_values", current_dir, files)
             mismatch_count, notes = module.compare_paper_to_release(root, root / "analysis" / "paper_inputs", tmp_root / "paper_compare")
-            if mismatch_count != 92:
-                errors.append(f"analysis compare-paper expected 92 differences, observed {mismatch_count}")
+            if mismatch_count != 88:
+                errors.append(f"analysis compare-paper expected 88 differences, observed {mismatch_count}")
             return {"current_status": "passed", "current_files": files, "paper_current_mismatch_count": mismatch_count, "paper_current_notes": notes}
     except BaseException as exc:  # pragma: no cover - fail loudly in validation output
         errors.append(f"analysis validation failed: {type(exc).__name__}: {exc}")

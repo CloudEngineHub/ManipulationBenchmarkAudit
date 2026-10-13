@@ -5,6 +5,7 @@ does not bundle leaderboard CSV exports, generated plots, or derived tables.
 """
 
 import math
+from decimal import Decimal
 
 import numpy as np
 from numba import njit
@@ -172,7 +173,7 @@ def sufficient_L_for_A(A, T, S, R, z, qmax_all=None):
 
 def compute_cutoffs(mu_a, T, S, R, alpha, qmax_all=None):
     N = T * S
-    A = int(round(mu_a * N))
+    A = round(Decimal(str(mu_a)) * N)
     z = normal_critical_value(alpha)
     L_necessary = necessary_L_for_A(A, T, S, R, z)
     L_sufficient = sufficient_L_for_A(A, T, S, R, z, qmax_all=qmax_all)
